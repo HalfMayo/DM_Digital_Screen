@@ -1,0 +1,1451 @@
+{
+    "friends": ["Jeck", "Camilla", "Anthony", "Alessio"],
+    "foes": [
+        {
+            "name": "Guard",
+            "unique": false,
+            "perception": "+7; (8 to find concealed objects)",
+            "languages": "Common",
+            "skills": "Athletics +7, Intimidation +5, Legal Lore +3",
+            "stats": "Str +4, Dex +2, Con +2, Int +0, Wis +2, Cha -1",
+            "items": "Club, Crossbow (10 bolts), Dagger, Sap, Scale mail, Signal whistle",
+            "ac": "18",
+            "ts": "Fort +7, Ref +5, Will +5",
+            "hp": "20",
+            "feats": {
+                "1": "Attack of Opportunity"
+            },
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Club +9 [+4/-1], 1d6+4 bludgeoning",
+                    "2": "Sap +9 [+5/+1] (agile, nonlethal), 1d6+4 bludgeoning"
+                },
+                "ranged": {
+                    "1": "Crossbow +7 [+2/-3] (range increment 120 feet, reload 1), 1d8 piercing",
+                    "2": "Club +7 [+2/-3] (thrown 10 feet), 1d6+4 bludgeoning"
+                }
+            }
+        }, {
+            "name": "Watch Officer",
+            "unique": false,
+            "perception": "+8; (9 to Sense Motive)",
+            "languages": "Common",
+            "skills": "Athletics +11, Diplomacy +6, Intimidation +9, Legal Lore +7, Society +5",
+            "stats": "Str +4, Dex +1, Con +3, Int +0, Wis +1, Cha +1",
+            "items": "breastplate, crossbow (20 bolts), dagger, signal whistle, steel shield (Hardness 5, 20 HP, BT 10), warhammer",
+            "ac": "20 (22 with shield raised)",
+            "ts": "Fort +10, Ref +6, Will +8",
+            "hp": "45",
+            "feats": {
+                "1": "Air of Authority (aura, emotion, mental) 10 feet: Creatures in the aura who are the same or lower level than the watch officer take a -2 status penalty to their Will DC against the watch officer's attempts to Coerce or Demoralize them.",
+                "2": "Bravery: When the watch officer rolls a success on a Will save against a fear effect, they get a critical success instead. In addition, any time they gain the frightened condition, reduce its value by 1.",
+                "3": "Attack of Opportunity",
+                "4": "Shield Block"},
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Warhammer +13 [+8/+3] (shove), 1d8+7 bludgeoning"
+                },
+                "ranged": {
+                    "1": "Crossbow +10 [+5/+0] (range increment 120 feet, reload 1), 1d8+3 piercing",
+                    "2": "Club +7 [+2/-3] (thrown 10 feet), 1d6+4 bludgeoning"
+                },
+                "special": {
+                    "1": "Sudden Charge (2) | Frequency once per round; Effect The watch officer Strides twice. If they end their movement within melee reach of at least one enemy, they can make a melee Strike against that enemy."
+                }
+            }
+        }, {
+            "name": "Zombie Brute",
+            "unique": false,
+            "perception": "+4; darkvision",
+            "skills": "Athletics +9",
+            "stats": "Str +5, Dex -3, Con +4, Int -5, Wis +0, Cha -2",
+            "conditions": {
+                "1":"Slow | A zombie is permanently slowed 1 and can't use reactions."
+            },
+            "ac": "15",
+            "ts": "Fort +10, Ref +3, Will +6",
+            "hp": "70 (negative healing)",
+            "immunities": "death effects, disease, mental, paralyzed, poison, unconscious",
+            "weaknesses": "positive 10, slashing 10",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Fist +11 [+6/+1] (reach 10 feet), 1d12+5 bludgeoning plus Improved Push 5 feet"
+                }
+            }
+        }, {
+            "name": "Zombie",
+            "unique": false,
+            "perception": "+0; darkvision",
+            "skills": "Athletics +5",
+            "stats": "Str +3, Dex -2, Con +2, Int -5, Wis +0, Cha -2",
+            "conditions": {
+                "1":"Slow | A zombie is permanently slowed 1 and can't use reactions."
+            },
+            "ac": "12",
+            "ts": "Fort +6, Ref +0, Will +2",
+            "hp": "20 (negative healing)",
+            "immunities": "death effects, disease, mental, paralyzed, poison, unconscious",
+            "weaknesses": "positive 5, slashing 5",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Fist +7 [+2/-3], 1d6+3 bludgeoning plus Grab"
+                },
+                "special": {
+                    "1": "Jaws (1) | (attack) Requirement The zombie has a creature grabbed or restrained. Effect The zombie makes a jaws unarmed melee Strike against the grabbed or restrained creature with an attack modifier of +7 that deals 1d8+3 piercing damage."
+                }
+            }
+        }, {
+            "name": "Lemure",
+            "unique": false,
+            "perception": "+0; greater darkvision",
+            "skills": "Athletics +5",
+            "stats": "Str +2, Dex +0, Con +3, Int -5, Wis +0, Cha -3",
+            "ac": "13",
+            "ts": " Fort +10, Ref +5, Will +3",
+            "hp": "20",
+            "immunities": "fire, mental",
+            "resistances": "physical 3 (except silver), poison 5",
+            "weaknesses": "good 3",
+            "speed": "20 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Claw +7 [+2/-3] (evil, magical), 1d4+2 slashing plus 1 evil"
+                },
+                "special": {
+                    "1": "Subservience | Lemures have little drive of their own, but other devils can take command of them. A non-lemure devil can issue a command to all lemures within 60 feet of it with a single action, which has the auditory and concentrate traits. The devil picks one of the following orders lemures can understand, and the lemures follow that order. The command and its effects end once the commander is out of the lemure's sight, a new command is issued by the same or another devil, or the lemure dies. KILL: The lemure attacks one target the commander singles out and gains a +1 circumstance bonus to attack rolls against the target. DEFEND: The lemure circles the commander and attacks any creature that comes near. It gains a +1 circumstance bonus to AC and saves. FETCH: The lemure gains a +10-foot circumstance bonus to its Speed and attempts to get an object or person the commander singles out. It attacks anyone and anything that gets in the way. WORK: The lemure performs drudge work dictated by the commander."
+                }
+            }
+        }, {
+            "name": "Mage Bodyguard",
+            "unique": false,
+            "perception": "+6",
+            "languages": "Common",
+            "skills": "Arcana +8, Society +6, Stealth +4, Thievery +6",
+            "stats": "Str +0, Dex +2, Con +1, Int +4, Wis +1, Cha +1",
+            "ac": "15",
+            "ts": "Fort +4, Ref +5, Will +8",
+            "hp": "16",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Staff +3 [+0/-5] (two-hand d8), 1d4-2 bludgeoning"
+                }
+            },
+            "spells": "Arcane Prepared Spells DC b, attack +10; 1st grease, mage armor, magic missile, true strike; Cantrips (1st) dancing lights, daze, detect magic, electric arc, mage hand, message, shield | Wizard School Spell DC b, 1 Focus Point; 1st diviner's sight",
+            "items": "Invisibility potion, Spellbook, Staff, Thieves' tools"
+        }, {
+            "name": "Bodyguard",
+            "unique": false,
+            "perception": "+8",
+            "languages": "Common",
+            "skills": "Athletics +7, Intimidation +6, Society +2",
+            "stats": "Str +4, Dex +2, Con +3, Int -1, Wis +1, Cha +0",
+            "ac": "16",
+            "ts": "Fort +8, Ref +7, Will +4",
+            "hp": "25",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Greatclub +7 (backswing, shove), 1d10+4 bludgeoning",
+                    "2": "Sap +7 (agile, nonlethal), 1d6+4 bludgeoning"
+                },
+                "special": {
+                    "1": "Bodyguard's Defense (2) | The bodyguard selects one creature they can see and hear within 30 feet. That creature gains a +2 circumstance bonus to AC as long as the bodyguard is adjacent to the chosen creature and can act; this bonus lasts until the start of the bodyguard's next turn."
+                }
+            },
+            "items": "Greatclub, Sap, Studded leather"
+        }, {
+            "name": "Scout",
+            "unique": false,
+            "perception": "+8",
+            "languages": "Common",
+            "skills": "Acrobatics +7, Crafting +3 (+5 traps), Nature +6, Stealth +7, Survival +6",
+            "stats": "Str +0, Dex +4, Con +1, Int +0, Wis +3, Cha +1",
+            "ac": "18",
+            "ts": "Fort +5, Ref +9, Will +6",
+            "hp": "16",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Shortsword +9 (agile, finesse, versatile S), 1d6 piercing"
+                },
+                "ranged": {
+                    "1": "Crossbow +9 (range increment 120 feet, reload 1), 1d8 piercing"
+                },
+                "special": {
+                    "1": "Sneak Attack | The scout deals an extra 1d6 precision damage to flat-footed creatures.",
+                    "2": "Quick Trap (3) | The scout deploys one spike trap in an adjacent square.",
+                    "3": "Spike Trap | Once this trap is deployed in a square, it deals 2d8 piercing damage to anyone who steps on that square and they must attempt a DC b basic Reflex saving throw. A hero takes no damage on a critical success, half damage on a success, full damage on a failure, and double damage on a critical failure."
+                }
+            },
+            "items": "crossbow (20 bolts), leather armor, shortsword, snare kit"
+        }, {
+            "name": "Wolf",
+            "unique": false,
+            "perception": "+7; low-light vision, scent (imprecise) 9 metres",
+            "skills": "Acrobatics +7, Athletics +5, Stealth +7, Survival +7",
+            "stats": "Str +2, Dex +4, Con +1, Int -4, Wis +2, Cha -2",
+            "ac": "15",
+            "ts": "Fort +6, Ref +9, Will +5",
+            "hp": "24",
+            "speed": "35 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Jaws +9, 1d6+2 piercing plus Knockdown"
+                },
+                "special": {
+                    "1": "Pack Attack | The wolf's Strikes deal 1d4 extra damage to creatures within reach of at least two of the wolf's allies."
+                }
+            }
+        }, {
+            "name": "Cacodaemon",
+            "unique": false,
+            "perception": "+6; darkvision",
+            "languages": "Common, Daemonic; telepathy 100 feet",
+            "skills": "Acrobatics +8, Deception +5, Religion +6, Stealth +8",
+            "stats": "Str +0, Dex +3, Con +2, Int -1, Wis +1, Cha +2",
+            "ac": "16",
+            "ts": "Fort +7, Ref +8, Will +6",
+            "immunities": "death effetcs",
+            "weaknesses": "good 3",
+            "hp": "22",
+            "speed": "5 feet, fly 40 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Jaws +8 [+4/+0] (agile, disease, evil, finesse, magical), 1d8 piercing plus 1d4 evil and cacodaemonia"
+                },
+                "special": {
+                    "1": "Cacodaemonia (disease) | The cacodaemon can telepathically communicate with the afflicted creature at any distance on the same plane; Saving Throw DC b Fortitude; Stage 1 carrier (1 day); Stage 2 stupefied 1 (1 day); Stage 3 stupefied 2 (1 day)",
+                    "2": "Change Shape (1) | (concentrate, divine, polymorph, transmutation): LIZARD | Speed 20 feet; Melee jaws +8 (agile, finesse), 1d8+1 piercing || OCTOPUS | size Small; Speed 20 feet, swim 30 feet; Melee tentacle +8 (finesse), 1d8+1 bludgeoning plus Grab; Melee beak +8 (agile, finesse), 1d6 piercing plus 2 poison || SCORPION | size Small; Speed 30 feet; Melee pincer +8 (agile, finesse), 1d6+1 bludgeoning plus Grab; Melee stinger +8 (agile, finesse), 1d6+1 piercing plus 1d4 poison",
+                    "3": "Soul Lock (3) | (death, divine, necromancy) Once per day, a cacodaemon can ingest the soul of a sentient creature within 30 feet that died within the last minute. When it does, the cacodaemon grows a fist-sized soul gem (Hardness 2, HP 8) in its gut and can regurgitate it at any time as an Interact action. Destroying the gem frees the soul within but does not return the deceased creature to life. The caster of a spell to return a creature to life whose soul is trapped within a soul gem must succeed at a DC 30 Religion check. On a success, the soul gem shatters and the creature is returned to life as normal for the spell. By using an Interact action, a fiend can ingest a soul gem it is holding, condemning the soul to the fiend's home plane. The fiend gains fast healing 5 for 1 minute."
+                }
+            },
+            "spells": "Divine Innate Spells DC b; 4th read omens; 2nd invisibility (at will; self only); 1st detect alignment (at will; good only), fear; Cantrips (1st) detect magic"
+        }, {
+            "name": "Slurk (weak)",
+            "unique": false,
+            "perception": "+6; darkvision",
+            "skills": "Acrobatics +4 (+6 to Escape), Athletics +6, Stealth +3",
+            "stats": "Str +4, Dex +2, Con +4, Int -4, Wis +0, Cha +0",
+            "ac": "15",
+            "ts": "Fort +8 (+12 vs. Grapple or Shove), Ref +4, Will +2",
+            "hp": "25",
+            "speed": "30 feet, climb 30 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Tusks +9 [+4/-1] (deadly 1d10), 1d8-2+4 piercing"
+                },
+                "ranged": {
+                    "1": "Slime squirt +7 [+2/-3] (range increment 30 feet), Effect: Entangling slime"
+                },
+                "special": {
+                    "1": "Belly Grease (3) | The slurk extrudes a slippery grease from its ventral glands to coat the floor under it and in a 5-foot emanation, turning the affected area into uneven ground for 10 minutes, after which it dries to a putrid crust. The DC to Balance across the slime is 18.",
+                    "2": "A creature struck by a slurk's slime squirt becomes clumsy 1 and takes a -5-foot penalty to Speed for 1 hour or until the slime is removed. The slime can be removed with a total of three Interact actions by the entangled creature or creatures adjacent to the creature. These actions don't need to be consecutive or made by the same creature."
+                }
+            }
+        }, {
+            "name": "Leprechaun",
+            "unique": false,
+            "perception": "+11; low-light vision",
+            "languages": "Common, Sylvan",
+            "skills": "Acrobatics +8, Deception +9, Gold Lore +7, Nature +7, Performance +9, Thievery +8",
+            "stats": "Str +1, Dex +4, Con +1, Int +3, Wis +3, Cha +4",
+            "ac": "18",
+            "ts": "Fort +8, Ref +11, Will +10",
+            "hp": "25",
+            "speed": "30 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Club +7 [+2/-3], 1d6+3 bludgeoning"
+                },
+                "special": {
+                    "1": "Create Object (2) | (conjuration, manipulate, primal) Frequency three times per day; Effect: The leprechaun produces an item out of their hat, from behind their jacket, from within a hole in a tree stump, or from any other unexpected location. This conjured item must be no more than 1 Bulk and must be made of relatively commonplace material (such as cloth, wood, stone, or even low-value metal like iron or lead). It can't rely on intricate artistry or complex moving parts, never fulfills a Cost or the like, and can't be made of precious materials or materials with a rarity of uncommon or higher. The created object is temporary and lasts for 1 hour or until the leprechaun creates a new item, whichever comes first.",
+                    "2": "Leprechaun Magic | When a leprechaun uses their innate spells to deceive, trick, or humiliate a creature, the spell DC increases to 20 and the attack modifier to +11."
+                }
+            },
+            "spells": "Primal Innate Spells DC 18, attack +10; 2nd illusory creature, illusory object, invisibility (self only); 1st color spray, shillelagh, ventriloquism; Cantrips (2nd) dancing lights, ghost sound, mage hand, prestidigitation, telekinetic projectile"
+        }, {
+            "name": "Spider Swarm",
+            "unique": false,
+            "perception": "+4; web sense",
+            "conditions": {
+                "1":"Web Sense | The spider swarm has imprecise tremorsense to detect the vibrations of creatures touching its web."
+            },
+            "languages": "Common, Daemonic; telepathy 100 feet",
+            "skills": "Acrobatics +5, Athletics +2, Stealth +5",
+            "stats": "Str -2, Dex +3, Con +0, Int -5, Wis +0, Cha -4",
+            "ac": "15",
+            "ts": "Fort +4, Ref +7, Will +2",
+            "immunities": "precision, swarm mind",
+            "resistances": "bludgeoning 2, piercing 5, slashing 5",
+            "weaknesses": "area damage 5, splash damage 5",
+            "hp": "12",
+            "speed": "20 feet, climb 20 feet",
+            "attacks": {
+                "special": {
+                    "1": "Swarming Bites (1) | Each enemy in the spider swarm's space takes 1d4 piercing damage with a DC 14 basic Reflex save. A creature that fails its save is exposed to spider swarm venom.",
+                    "2": "Spider Swarm Venom (poison) | Saving Throw Fortitude DC 14; Maximum Duration 4 rounds; Stage 1 1 poison and enfeebled 1 (1 round); Stage 2 1d4 poison and enfeebled 1 (1 round)."
+                }
+            }
+        }, {
+            "name": "Kobold Scout",
+            "img": "https://2e.aonprd.com/Images/Monsters/Kobold_KoboldScout.png",
+            "unique": false,
+            "perception": "+8; darkvision",
+            "languages": "Common, Draconic",
+            "skills": "Acrobatics +7, Crafting +3 (+5 traps), Nature +6, Stealth +7, Survival +6",
+            "stats": "Str +0, Dex +4, Con +1, Int +0, Wis +3, Cha +1",
+            "ac": "18",
+            "ts": "Fort +5, Ref +9, Will +6",
+            "hp": "16",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Shortsword +9 [+5/+1] (agile, finesse, versatile S), 1d6 piercing"
+                },
+                "ranged": {
+                    "1": "Crossbow +9 [+4/-1] (range increment 120 feet, reload 1), 1d8 piercing"
+                },
+                "special": {
+                    "1": "Hurried Retreat (1) | Requirements The kobold scout is adjacent to at least one enemy. Effect The kobold scout Strides up to its Speed plus 5 feet and gains a +2 circumstance bonus to AC against reactions triggered by this movement. It must end this movement in a space that's not adjacent to any enemy.",
+                    "2": "Sneak Attack | The kobold scout deals an extra 1d6 precision damage to flat-footed creatures."
+                }
+            }, "items": "Crossbow (20 bolts), leather armor, shortsword, snare kit"
+        }, {
+            "name": "Kobold Warrior",
+            "img": "https://2e.aonprd.com/Images/Monsters/Kobold_KoboldWarrior.png",
+            "unique": false,
+            "perception": "+3; darkvision",
+            "languages": "Draconic",
+            "skills": "Acrobatics +5, Crafting +2 (+4 traps), Stealth +5",
+            "stats": "Str +1, Dex +3, Con +0, Int +0, Wis +1, Cha -1",
+            "ac": "16",
+            "ts": "Fort +4, Ref +7, Will +3",
+            "hp": "8",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Spear +3 [-2/-7], 1d6+1 piercing"
+                },
+                "ranged": {
+                    "1": "Sling +5 [+0/-5] (propulsive, range increment 50 feet, reload 1), 1d4 bludgeoning",
+                    "2": "Spear +5 [+0/-5] (thrown 20 feet), 1d6+1 piercing"
+                },
+                "special": {
+                    "1": "Hurried Retreat (1) | Requirements The kobold scout is adjacent to at least one enemy. Effect The kobold scout Strides up to its Speed plus 5 feet and gains a +2 circumstance bonus to AC against reactions triggered by this movement. It must end this movement in a space that's not adjacent to any enemy.",
+                    "2": "Sneak Attack | The kobold scout deals an extra 1d6 precision damage to flat-footed creatures."
+                }
+            },
+            "items": "Leather armor, sling (20 bullets), spear"
+        }, {
+            "name": "Kobold Tunnelrunner",
+            "img": "https://2e.aonprd.com/Images/Ancestries/Kobold02.png",
+            "unique": false,
+            "perception": "+6; darkvision",
+            "languages": "Draconic",
+            "skills": "Acrobatics +5, Athletics +5, Crafting +2 (+4 traps), Mining Lore +4, Stealth +5",
+            "stats": "Str +1, Dex +3, Con +2, Int +0, Wis +2, Cha +0",
+            "ac": "16",
+            "ts": "Fort +6, Ref +9, Will +4",
+            "hp": "16",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Light pick +6 [+2/-2] (agile, fatal d8), Damage 1d4+1 piercing"
+                },
+                "special": {
+                     "1": "Sneak Attack | The kobold scout deals an extra 1d6 precision damage to flat-footed creatures."
+                }
+            },
+            "items": "Leather armor, light pick"
+        }, {
+            "name": "Kobold Dragon Mage",
+            "img": "https://2e.aonprd.com/Images/Ancestries/Kobold01.png",
+            "unique": false,
+            "perception": "+5; darkvision",
+            "languages": "Common, Draconic",
+            "skills": "Arcana +6, Deception +8, Diplomacy +8, Dragon Lore +10, Intimidation +8, Stealth +7",
+            "stats": "Str -1, Dex +3, Con +0, Int +2, Wis +1, Cha +4",
+            "ac": "17",
+            "ts": "Fort +4, Ref +7, Will +7",
+            "resistances": "poison 5",
+            "hp": "25",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Claw +7 [+3/-1] (agile, finesse), 1d6-1 slashing",
+                    "2": "Staff +3 [-2/-7] (two-hand d8), 1d4-1 bludgeoning"
+                },
+                "special": {
+                    "1": "Illusory Retreat (3) | (arcane, illusion, manipulate, move) Frequency once per hour; Requirements The kobold dragon mage is adjacent to at least one enemy. Effect The dragon mage creates an illusion of itself in its square and then becomes invisible (with the effects of a 2nd-level invisibility spell) for 1d4 rounds. The dragon mage can move up to half its Speed, but it must end its movement in a space that's not adjacent to any enemeies. This is a 1st-level spell that requires a somatic component.",
+                    "2": "Sneak Attack | The kobold scout deals an extra 1d6 precision damage to flat-footed creatures."
+                }
+            },
+            "spells": "Arcane Spontaneous Spells | DC 20; 1st fear, illusory object, magic missile (4 slots); Cantrips (1st) detect magic, electric arc, ghost sound, mage hand, tanglefoot",
+            "items": "Staff"
+        }, {
+            "name": "Aghash (weak)",
+            "unique": false,
+            "perception": "+12; greater darkvision",
+            "languages": "Common, Daemonic, telepathy 100ft",
+            "skills": "Arcana +7, Athletics +6, Deception +10, Intimidation +10, Religion +8, Stealth +8",
+            "stats": "Str +3, Dex +4, Con +3, Int +1, Wis +2, Cha +4",
+            "ac": "17",
+            "ts": "Fort +7, Ref +8, Will +10; +1 status to all saves vs. magic",
+            "immunities": "curse",
+            "weaknesses": "silver 5, good 5",
+            "feats": {
+                "1": "Hatred of Beauty | While aghashes hate all mortals, they particularly despise beautiful objects and beautiful or charismatic mortals. When not in physical peril, an aghash is compelled to destroy art and other works of beauty. An aghash can't enter an area of pristine beauty without first marring it in some way. Given a choice, an aghash attacks a foe with the highest Charisma score first. If barred from doing so by force or some magical effect, they take 1d6 mental damage at the end of their turn."
+            },
+            "hp": "60",
+            "speed": "25 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Claw +12 [+8/+4] (agile, evil, finesse, magical), 1d6-2+5 slashing plus 1d6-2 evil"
+                },
+                "special": {
+                    "1": "Cursed Gaze (2) | (divine, concentrate, curse, fear, emotion, enchantment, mental, visual) The aghash fixes their gaze on one creature they can see within 20 feet. The creature must attempt a DC 19 Will save. || Critical Success: The creature is unaffected. | Success: The creature takes 2d6 mental damage and becomes frightened 1. | Failure: The creature takes 4d6 mental damage and becomes either frightened 2 or stunned 1 (the aghash's choice). | Critical Failure The creature takes 8d6 mental damage and becomes frightened 2 and stunned 2.",
+                    "2": "Sandstorm (3) | (conjuration, divine, earth) Frequency once per day; Effect The aghash creates a temporary sandstorm in a 30 foot emanation that lasts for 1 minute. Creatures within the emanation take a –4 circumstance penalty to Perception checks and must succeed at a DC 16 Fortitude save. On a failure, they're forced to hold their breath or else they start suffocating. A creature within the sandstorm at the end of its turn takes 1d6 slashing damage. Divs are immune to all effects of an aghash's sandstorm."
+                }
+            },
+            "spells": "Divine Innate Spells | DC 19 (-4 dmg); 4th dimension door, outcast's curse; 2nd touch of idiocy (at will); 1st illusory object (at will); Cantrips (2nd) detect magic || Rituals | DC 19 (-4 dmg); 1st div pact"
+        }, {
+            "name": "Doru",
+            "unique": false,
+            "perception": "+7; greater darkvision",
+            "languages": "Common, Daemonic, telepathy (touch)",
+            "skills": "Acrobatics +7, Arcana +8, Deception +6, Lore +10 (any one), Religion +5, Stealth +7",
+            "stats": "Str +0, Dex +4, Con +1, Int +3, Wis +2, Cha +3",
+            "ac": "16",
+            "ts": "Fort +4, Ref +9, Will +7",
+            "weaknesses": "silver 3, good 3",
+            "feats": {
+                "1": "Covetous of Secrets | Dorus have a weakness for secrets, hoarding them like a miser hoards gold. A creature can tempt a doru with some bit of obscure knowledge the doru doesn't know or thinks they don't know. Presenting the hint of the secret is a single action, which has the concentrate and linguistic traits, and requires a skill check using Deception, Lore, or Performance (or some other appropriate skill determined by the GM) against the doru's Will DC. On a success, the doru is fascinated for as long as the presenter draws out the explanation of the secret (spending 1 action each round doing so, to a maximum of 1 minute). On a critical success, the doru is fascinated for that duration plus 1 minute more as it ponders the implications of the secret. Regardless of the outcome, the doru is temporarily immune to that creature's attempts to present it with secrets for 1 day."
+            },
+            "hp": "20",
+            "speed": "15 feet, fly 30 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Bite +9 [+5/+1] (agile, evil, finesse, poison, magical), 1d6 piercing plus 1 evil and doru venom"
+                },
+                "special": {
+                    "1": "Doru Venom (poison) | Saving Throw DC 16 Fortitude; Maximum Duration 6 rounds; Stage 1 1d6 poison (1 round); Stage 2 1d6 poison and stupefied 1 (1 round); Stage 3 1d6 poison and stupefied 2 (1 round)."
+                }
+            },
+            "spells": "Divine Innate Spells | DC 17; 4th read omens; 2nd invisibility (at will; self only); 1st charm, illusory object; Cantrips (1st) detect magic"
+        }, {
+            "name": "Jinkin",
+            "unique": false,
+            "perception": "+7; darkvision",
+            "languages": "Undercommon",
+            "skills": "Acrobatics +7, Crafting +5 (+7 traps), Deception +5, Nature +5, Stealth +7, Thievery +7",
+            "stats": "Str -2, Dex +4, Con +0, Int +2, Wis +2, Cha +2",
+            "ac": "17",
+            "ts": "Fort +6, Ref +10, Will +7",
+            "weaknesses": "silver 2",
+            "hp": "19",
+            "speed": "30 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Shortsword +9 [+5/+1] (agile, finesse, magical, versatile S), 1d6-2 piercing"
+                },
+                "special": {
+                    "1": "Sneak Attack | The jinkin deals 1d6 extra precision damage to flat-footed creatures.",
+                    "2": "Tinker (curse, primal, transmutation) A group of six jinkins can work together for an hour to imbue an item with a curse at a range of 60 feet. While this process is lengthy, it's also unobtrusive and can be performed while Hiding. Jinkins prefer to use this ability on magic items. The curse makes the item unreliable (DC 5 flat check or waste any action to Interact with or Activate the item), adds a bizarre requirement to use the item, or imparts some other curse of a similar caliber."
+                }
+            },
+            "spells": "Primal Innate Spells DC 17; Cantrips (1st) prestidigitation",
+            "items": "Shortsword"
+        }, {
+            "name": "Gelatinous Cube",
+            "unique": false,
+            "perception": "+5; motion sense 60 feet, no vision",
+            "skills": "Athletics +11 (+13 to Shove)",
+            "stats": "Str +4, Dex -5, Con +5, Int -5, Wis +0, Cha -5",
+            "conditions": {
+                "1": "Motion Sense | A gelatinous cube can sense nearby motion through vibration and air movement.",
+                "2": "Transparent | A gelatinous cube is so clear that it's difficult to spot. A successful DC 23 Perception check is required to notice a stationary cube, and a creature must be Searching to attempt this check. A creature that walks into the cube is automatically Engulfed (this usually causes the GM to call for initiative)."
+            },
+            "ac": "10",
+            "ts": "Fort +12, Ref +0, Will +5",
+            "immunities": "acid, critical hits, mental, precision, unconscious, visual",
+            "resistances": "electricity 5",
+            "hp": "90",
+            "speed": "15 feet",
+            "attacks": {
+                "melee": {
+                    "1": "Cube face +11 [+6/+1], 1d6 acid plus paralysis"
+                },
+                "special": {
+                    "1": "Engulf (2) | DC 19, 2d6 acid, Escape DC 19, Rupture 7. A creature Engulfed by the gelatinous cube must also attempt a saving throw against paralysis.",
+                    "2": "Paralysis (incapacitation) | A creature Engulfed by the cube or hit by its attack is paralyzed unless it succeeds at a DC 20 Fortitude save. A victim can attempt a new save to recover at the end of each of its turns.",
+                    "3": "Weak Acid | A gelatinous cube's acid damages only organic material—not metal, stone, or other inorganic substances."
+                }
+            }
+        }
+    ],
+    "conditions": [
+        {
+            "id": 0,
+            "title": "Blinded",
+            "propOne": "You can't see. All normal terrain is difficult terrain to you. You can't detect anything using vision. You automatically critically fail Perception checks that require you to be able to see, and if vision is your only precise sense, you take a -4 status penalty to Perception checks. You are immune to visual effects. Blinded overrides dazzled."
+        }, {
+            "id": 1,
+            "title": "Broken",
+            "propOne": "Broken is a condition that affects objects. An object is broken when damage has reduced its Hit Points to equal or less than its Broken Threshold. A broken object can't be used for its normal function, nor does it grant bonuses— with the exception of armor. Broken armor still grants its item bonus to AC, but it also imparts a status penalty to AC depending on its category: -1 for broken light armor, -2 for broken medium armor, or -3 for broken heavy armor.A broken item still imposes penalties and limitations normally incurred by carrying, holding, or wearing it. For example, broken armor would still impose its Dexterity modifier cap, check penalty, and so forth. If an effect makes an item broken automatically and the item has more HP than its Broken Threshold, that effect also reduces the item's current HP to the Broken Threshold."
+        }, {
+            "id": 2,
+            "title": "Clumsy",
+            "propOne": "Your movements become clumsy and inexact. Clumsy always includes a value. You take a status penalty equal to the condition value to Dexterity-based checks and DCs, including AC, Reflex saves, ranged attack rolls, and skill checks using Acrobatics, Stealth, and Thievery."
+        }, {
+            "id": 3,
+            "title": "Concealed",
+            "propOne": "While you are concealed from a creature, such as in a thick fog, you are difficult for that creature to see. You can still be observed, but you're tougher to target. A creature that you're concealed from must succeed at a DC 5 flat check when targeting you with an attack, spell, or other effect. Area effects aren't subject to this flat check. If the check fails, the attack, spell, or effect doesn't affect you."
+        }, {
+            "id": 4,
+            "title": "Confused",
+            "propOne": "You don't have your wits about you, and you attack wildly. You are flat-footed, you don't treat anyone as your ally (though they might still treat you as theirs), and you can't Delay, Ready, or use reactions. You use all your actions to Strike or cast offensive cantrips, though the GM can have you use other actions to facilitate attack, such as draw a weapon, move so that a target is in reach, and so forth. Your targets are determined randomly by the GM. If you have no other viable targets, you target yourself, automatically hitting but not scoring a critical hit. If it's impossible for you to attack or cast spells, you babble incoherently, wasting your actions.Each time you take damage from an attack or spell, you can attempt a DC 11 flat check to recover from your confusion and end the condition."
+        }, {
+            "id": 5,
+            "title": "Controlled",
+            "propOne": "Someone else is making your decisions for you, usually because you're being commanded or magically dominated. The controller dictates how you act and can make you use any of your actions, including attacks, reactions, or even Delay. The controller usually does not have to spend their own actions when controlling you."
+        }, {
+            "id": 6,
+            "title": "Dazzled",
+            "propOne": "Your eyes are overstimulated. If vision is your only precise sense, all creatures and objects are concealed from you."
+        }, {
+            "id": 7,
+            "title": "Deafened",
+            "propOne": "You can't hear. You automatically critically fail Perception checks that require you to be able to hear. You take a -2 status penalty to Perception checks for initiative and checks that involve sound but also rely on other senses. If you perform an action with the auditory trait, you must succeed at a DC 5 flat check or the action is lost; attempt the check after spending the action but before any effects are applied. You are immune to auditory effects."
+        }, {
+            "id": 8,
+            "title": "Doomed",
+            "propOne": "A powerful force has gripped your soul, calling you closer to death. Doomed always includes a value. The dying value at which you die is reduced by your doomed value. If your maximum dying value is reduced to 0, you instantly die. When you die, you're no longer doomed. Your doomed value decreases by 1 each time you get a full night's rest."
+        }, {
+            "id": 9,
+            "title": "Drained",
+            "propOne": "When a creature successfully drains you of blood or life force, you become less healthy. Drained always includes a value. You take a status penalty equal to your drained value on Constitution-based checks, such as Fortitude saves. You also lose a number of Hit Points equal to your level (minimum 1) times the drained value, and your maximum Hit Points are reduced by the same amount. For example, if you're hit by an effect that inflicts drained 3 and you're a 3rd-level character, you lose 9 Hit Points and reduce your maximum Hit Points by 9. Losing these Hit Points doesn't count as taking damage. Each time you get a full night's rest, your drained value decreases by 1. This increases your maximum Hit Points, but you don't immediately recover the lost Hit Points."
+        }, {
+            "id": 10,
+            "title": "Dying",
+            "propOne": "You are bleeding out or otherwise at death's door. While you have this condition, you are unconscious . Dying always includes a value, and if it ever reaches dying 4, you die. If you're dying, you must attempt a recovery check at the start of your turn each round to determine whether you get better or worse. Your dying condition increases by 1 if you take damage while dying, or by 2 if you take damage from an enemy's critical hit or a critical failure on your save. If you lose the dying condition by succeeding at a recovery check and are still at 0 Hit Points, you remain unconscious, but you can wake up as described in that condition. You lose the dying condition automatically and wake up if you ever have 1 Hit Point or more. Any time you lose the dying condition, you gain the wounded 1 condition, or increase your wounded condition value by 1 if you already have that condition. You immediately move your initiative position to directly before the turn in which you were reduced to 0 HP. You gain the dying 1 condition. If the effect that knocked you out was a critical success from the attacker or the result of your critical failure, you gain the dying 2 condition instead. If you have the wounded condition, increase these values by your wounded value. If the damage came from a nonlethal attack or effect, you don't gain the dying condition— you are instead unconscious with 0 Hit Points."
+        }, {
+            "id": 11,
+            "title": "Encumbered",
+            "propOne": "You are carrying more weight than you can manage. While you're encumbered, you're clumsy 1 and take a 10-foot penalty to all your Speeds. As with all penalties to your Speed, this can't reduce your Speed below 5 feet."
+        }, {
+            "id": 12,
+            "title": "Enfeebled",
+            "propOne": "You're physically weakened. Enfeebled always includes a value. When you are enfeebled, you take a status penalty equal to the condition value to Strength-based rolls and DCs, including Strength-based melee attack rolls, Strength-based damage rolls, and Athletics checks."
+        }, {
+            "id": 13,
+            "title": "Fascinated",
+            "propOne": "You are compelled to focus your attention on something, distracting you from whatever else is going on around you. You take a -2 status penalty to Perception and skill checks, and you can't use actions with the concentrate trait unless they or their intended consequences are related to the subject of your fascination (as determined by the GM). For instance, you might be able to Seek and Recall Knowledge about the subject, but you likely couldn't cast a spell targeting a different creature. This condition ends if a creature uses hostile actions against you or any of your allies."
+        }, {
+            "id": 14,
+            "title": "Fatigued",
+            "propOne": "You're tired and can't summon much energy. You take a -1 status penalty to AC and saving throws. You can't use exploration activities performed while traveling, such as those listed here. You recover from fatigue after a full night's rest."
+        }, {
+            "id": 15,
+            "title": "Flat-footed",
+            "propOne": "You're distracted or otherwise unable to focus your full attention on defense. You take a -2 circumstance penalty to AC. Some effects give you the flat-footed condition only to certain creatures or against certain attacks. Others—especially conditions—can make you universally flat-footed against everything. If a rule doesn't specify that the condition applies only to certain circumstances, it applies to all of them."
+        }, {
+            "id": 16,
+            "title": "Fleeing",
+            "propOne": "You're forced to run away due to fear or some other compulsion. On your turn, you must spend each of your actions trying to escape the source of the fleeing condition as expediently as possible (such as by using move actions to flee, or opening doors barring your escape). The source is usually the effect or caster that gave you the condition, though some effects might define something else as the source. You can't Delay or Ready while fleeing."
+        }, {
+            "id": 17,
+            "title": "Friendly",
+            "propOne": "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is friendly to a character likes that character. The character can attempt to Make a Request of a friendly creature, and the friendly creature is likely to agree to a simple and safe request that doesn't cost it much to fulfill. If the character or one of their allies uses hostile actions against the creature, the creature gains a worse attitude condition depending on the severity of the hostile action, as determined by the GM."
+        }, {
+            "id": 18,
+            "title": "Frightened",
+            "propOne": "You're gripped by fear and struggle to control your nerves. The frightened condition always includes a value. You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1."
+        }, {
+            "id": 19,
+            "title": "Grabbed",
+            "propOne": "You're held in place by another creature, giving you the flat-footed and immobilized conditions. If you attempt a manipulate action while grabbed, you must succeed at a DC 5 flat check or it is lost; roll the check after spending the action, but before any effects are applied."
+        }, {
+            "id": 20,
+            "title": "Helpful",
+            "propOne": "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is helpful to a character wishes to actively aid that character. It will accept reasonable Requests from that character, as long as such requests aren't at the expense of the helpful creature's goals or quality of life. If the character or one of their allies uses a hostile action against the creature, the creature gains a worse attitude condition depending on the severity of the hostile action, as determined by the GM."
+        }, {
+            "id": 21,
+            "title": "Hidden",
+            "propOne": "While you're hidden from a creature, that creature knows the space you're in but can't tell precisely where you are. You typically become hidden by using Stealth to Hide. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed. A creature you're hidden from is flat-footed to you, and it must succeed at a DC 11 flat check when targeting you with an attack, spell, or other effect or it fails to affect you. Area effects aren't subject to this flat check. A creature might be able to use the Seek action to try to observe you."
+        }, {
+            "id": 22,
+            "title": "Hostile",
+            "propOne": "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is hostile to a character actively seeks to harm that character. It doesn't necessarily attack, but it won't accept Requests from the character."
+        }, {
+            "id": 23,
+            "title": "Immobilized",
+            "propOne": "You can't use any action with the move trait. If you're immobilized by something holding you in place and an external force would move you out of your space, the force must succeed at a check against either the DC of the effect holding you in place or the relevant defense (usually Fortitude DC) of the monster holding you in place."
+        }, {
+            "id": 24,
+            "title": "Indifferent",
+            "propOne": "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is indifferent to a character doesn't really care one way or the other about that character. Assume a creature's attitude to a given character is indifferent unless specified otherwise."
+         }, {
+            "id": 25,
+            "title": "Invisible",
+            "propOne": "While invisible, you can't be seen. You're undetected to everyone. Creatures can Seek to attempt to detect you; if a creature succeeds at its Perception check against your Stealth DC, you become hidden to that creature until you Sneak to become undetected again. If you become invisible while someone can already see you, you start out hidden to the observer (instead of undetected) until you successfully Sneak. You can't become observed while invisible except via special abilities or magic."
+        }, {
+            "id": 26,
+            "title": "Observed",
+            "propOne": "Anything in plain view is observed by you. If a creature takes measures to avoid detection, such as by using Stealth to Hide, it can become hidden or undetected instead of observed. If you have another precise sense instead of or in addition to sight, you might be able to observe a creature or object using that sense instead. You can observe a creature only with precise senses. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed."
+        }, {
+            "id": 27,
+            "title": "Paralyzed",
+            "propOne": "Your body is frozen in place. You have the flat-footed condition and can't act except to Recall Knowledge and use actions that require only the use of your mind (as determined by the GM). Your senses still function, but only in the areas you can perceive without moving your body, so you can't Seek while paralyzed."
+        }, {
+            "id": 28,
+            "title": "Persistent damage",
+            "propOne": "Persistent damage comes from effects like acid, being on fire, or many other situations. It appears as “X persistent [type] damage,” where “X” is the amount of damage dealt and “[type]” is the damage type. Like normal damage, it can be doubled or halved based on the results of an attack roll or saving throw. Instead of taking persistent damage immediately, you take it at the end of each of your turns as long as you have the condition, rolling any damage dice anew each time. After you take persistent damage, roll a DC 15 flat check to see if you recover from the persistent damage. If you succeed, the condition ends. Persistent damage runs its course and automatically ends after a certain amount of time as fire burns out, blood clots, and the like. The GM determines when this occurs, but it usually takes 1 minute. || ASSISTED RECOVERY | You can take steps to help yourself recover from persistent damage, or an ally can help you, allowing you to attempt an additional flat check before the end of your turn. This is usually an activity requiring 2 actions, and it must be something that would reasonably improve your chances (as determined by the GM). For example, you might try to smother a flame or wash off acid. This allows you to attempt an extra flat check immediately, but only once per round. The GM decides how your help works, using the following examples as guidelines when there's not a specific action that applies. The action to help might require a skill check or another roll to determine its effectiveness. Reduce the DC of the flat check to 10 for a particularly appropriate type of help, such as dousing you in water to put out flames. Automatically end the condition due to the type of help, such as healing that restores you to your maximum HP to end persistent bleed damage, or submerging yourself in a lake to end persistent fire damage. Alter the number of actions required to help you if the means the helper uses are especially efficient or remarkably inefficient. || IMMUNITIES, RESISTANCES, WEAKNESSES | Immunities, resistances, and weaknesses all apply to persistent damage. If an effect deals initial damage in addition to persistent damage, apply immunities, resistances, and weaknesses separately to the initial damage and to the persistent damage. Usually, if an effect negates the initial damage, it also negates the persistent damage, such as with a slashing weapon that also deals persistent bleed damage because it cut you. The GM might rule otherwise in some situations. || MULTIPLE PERSISTENT DAMAGE CONDITIONS | You can be simultaneously affected by multiple persistent damage conditions so long as they have different damage types. If you would gain more than one persistent damage condition with the same damage type, the higher amount of damage overrides the lower amount. The damage you take from persistent damage occurs all at once, so if something triggers when you take damage, it triggers only once; for example, if you're dying with several types of persistent damage, the persistent damage increases your dying condition only once."
+        }, {
+            "id": 29,
+            "title": "Petrified",
+            "propOne": "You have been turned to stone. You can't act, nor can you sense anything. You become an object with a Bulk double your normal Bulk (typically 12 for a petrified Medium creature or 6 for a petrified Small creature), AC 9, Hardness 8, and the same current Hit Points you had when alive. You don't have a Broken Threshold. When you're turned back into flesh, you have the same number of Hit Points you had as a statue. If the statue is destroyed, you immediately die. While petrified, your mind and body are in stasis, so you don't age or notice the passing of time."
+        }, {
+            "id": 30,
+            "title": "Prone",
+            "propOne": "You're lying on the ground. You are flat-footed and take a -2 circumstance penalty to attack rolls. The only move actions you can use while you're prone are Crawl and Stand. Standing up ends the prone condition. You can Take Cover while prone to hunker down and gain greater cover against ranged attacks, even if you don't have an object to get behind, gaining a +4 circumstance bonus to AC against ranged attacks (but you remain flat-footed). If you would be knocked prone while you're Climbing or Flying, you fall (see Falling for the rules on falling). You can't be knocked prone when Swimming."
+        }, {
+            "id": 31,
+            "title": "Quickened",
+            "propOne": "You gain 1 additional action at the start of your turn each round. Many effects that make you quickened specify the types of actions you can use with this additional action. If you become quickened from multiple sources, you can use the extra action you've been granted for any single action allowed by any of the effects that made you quickened. Because quickened has its effect at the start of your turn, you don't immediately gain actions if you become quickened during your turn."
+        }, {
+            "id": 32,
+            "title": "Restrained",
+            "propOne": "You're tied up and can barely move, or a creature has you pinned. You have the flat-footed and immobilized conditions, and you can't use any actions with the attack or manipulate traits except to attempt to Escape or Force Open your bonds. Restrained overrides grabbed."
+        }, {
+            "id": 33,
+            "title": "Sickened",
+            "propOne": "You feel ill. Sickened always includes a value. You take a status penalty equal to this value on all your checks and DCs. You can't willingly ingest anything—including elixirs and potions—while sickened. You can spend a single action retching in an attempt to recover, which lets you immediately attempt a Fortitude save against the DC of the effect that made you sickened. On a success, you reduce your sickened value by 1 (or by 2 on a critical success)."
+        }, {
+            "id": 34,
+            "title": "Slowed",
+            "propOne": "You have fewer actions. Slowed always includes a value. When you regain your actions at the start of your turn, reduce the number of actions you regain by your slowed value. Because slowed has its effect at the start of your turn, you don't immediately lose actions if you become slowed during your turn."
+        }, {
+            "id": 35,
+            "title": "Stunned",
+            "propOne": "You've become senseless. You can't act while stunned. Stunned usually includes a value, which indicates how many total actions you lose, possibly over multiple turns, from being stunned. Each time you regain actions (such as at the start of your turn), reduce the number you regain by your stunned value, then reduce your stunned value by the number of actions you lost. For example, if you were stunned 4, you would lose all 3 of your actions on your turn, reducing you to stunned 1; on your next turn, you would lose 1 more action, and then be able to use your remaining 2 actions normally. Stunned might also have a duration instead of a value. In this case, you lose all your actions for the listed duration. Stunned overrides slowed. If the duration of your stunned condition ends while you are slowed, you count the actions lost to the stunned condition toward those lost to being slowed. So, if you were stunned 1 and slowed 2 at the beginning of your turn, you would lose 1 action from stunned, and then lose only 1 additional action by being slowed, so you would still have 1 action remaining to use that turn."
+        }, {
+            "id": 36,
+            "title": "Stupefied",
+            "propOne": "Your thoughts and instincts are clouded. Stupefied always includes a value. You take a status penalty equal to this value on Intelligence-, Wisdom-, and Charisma-based checks and DCs, including Will saving throws, spell attack rolls, spell DCs, and skill checks that use these ability scores. Any time you attempt to Cast a Spell while stupefied, the spell is disrupted unless you succeed at a flat check with a DC equal to 5 + your stupefied value."
+        }, {
+            "id": 37,
+            "title": "Unconscious",
+            "propOne": "You're sleeping, or you've been knocked out. You can't act. You take a -4 status penalty to AC, Perception, and Reflex saves, and you have the blinded and flat-footed conditions. When you gain this condition, you fall prone and drop items you are wielding or holding unless the effect states otherwise or the GM determines you're in a position in which you wouldn't. If you're unconscious because you're dying, you can't wake up while you have 0 Hit Points. If you are restored to 1 Hit Point or more via healing, you lose the dying and unconscious conditions and can act normally on your next turn. If you are unconscious and at 0 Hit Points, but not dying, you naturally return to 1 Hit Point and awaken after sufficient time passes. The GM determines how long you remain unconscious, from a minimum of 10 minutes to several hours. If you receive healing during this time, you lose the unconscious condition and can act normally on your next turn. If you're unconscious and have more than 1 Hit Point (typically because you are asleep or unconscious due to an effect), you wake up in one of the following ways. Each causes you to lose the unconscious condition. You take damage, provided the damage doesn't reduce you to 0 Hit Points. If the damage reduces you to 0 Hit Points, you remain unconscious and gain the dying condition as normal. You receive healing, other than the natural healing you get from resting. Someone shakes you awake with an Interact action. There's loud noise going on around you—though this isn't automatic. At the start of your turn, you automatically attempt a Perception check against the noise's DC (or the lowest DC if there is more than one noise), waking up if you succeed. If creatures are attempting to stay quiet around you, this Perception check uses their Stealth DCs. Some magical effects make you sleep so deeply that they don't allow you to attempt this Perception check. If you are simply asleep, the GM decides you wake up either because you have had a restful night's sleep or something disrupted that rest."
+        }, {
+            "id": 38,
+            "title": "Undetected",
+            "propOne": "When you are undetected by a creature, that creature cannot see you at all, has no idea what space you occupy, and can't target you, though you still can be affected by abilities that target an area. When you're undetected by a creature, that creature is flat-footed to you. A creature you're undetected by can guess which square you're in to try targeting you. It must pick a square and attempt an attack. This works like targeting a hidden creature (requiring a DC 11 flat check), but the flat check and attack roll are rolled in secret by the GM, who doesn't reveal whether the attack missed due to failing the flat check, failing the attack roll, or choosing the wrong square. A creature can use the Seek action to try to find you."
+        }, {
+            "id": 39,
+            "title": "Unfriendly",
+            "propOne": "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is unfriendly to a character dislikes and specifically distrusts that character. The unfriendly creature won't accept Requests from the character."
+        }, {
+            "id": 40,
+            "title": "Unnoticed",
+            "propOne": "If you are unnoticed by a creature, that creature has no idea you are present at all. When you're unnoticed, you're also undetected by the creature. This condition matters for abilities that can be used only against targets totally unaware of your presence."
+        }, {
+            "id": 41,
+            "title": "Wounded",
+            "propOne": "You have been seriously injured. If you lose the dying condition and do not already have the wounded condition, you become wounded 1. If you already have the wounded condition when you lose the dying condition, your wounded condition value increases by 1. If you gain the dying condition while wounded, increase your dying condition value by your wounded value. The wounded condition ends if someone successfully restores Hit Points to you with Treat Wounds, or if you are restored to full Hit Points and rest for 10 minutes."
+        }
+    ],
+    "skills": [
+        {
+            "id": "0",
+            "title": "Acrobatics",
+            "propOne": [{
+               "name": "Balance (1)",
+               "requirements": "You are in a square that contains a narrow surface, uneven ground, or another similar feature.",
+               "description": "You move across a narrow surface or uneven ground, attempting an Acrobatics check against its Balance DC. You are flat-footed while on a narrow surface or uneven ground.",
+               "criticalSuccess": "You move up to your Speed.",
+               "success": "You move up to your Speed, treating it as difficult terrain (every 5 feet costs 10 feet of movement).",
+               "failure": "You must remain stationary to keep your balance (wasting the action) or you fall. If you fall, your turn ends.",
+               "criticalFailure": "You fall and your turn ends.",
+               "samples": "Untrained: tangled roots, uneven cobblestones; Trained: wooden beam; Expert: deep, loose gravel; Master: tightrope, smooth sheet of ice; Legendary: razor's edge, chunks of floor falling in midair"
+            }, {
+               "name": "Thumble Through (1)",
+               "requirements": "",
+               "description": "You Stride up to your Speed. During this movement, you can try to move through the space of one enemy. Attempt an Acrobatics check against the enemy's Reflex DC as soon as you try to enter its space. You can Tumble Through using Climb, Fly, Swim, or another action instead of Stride in the appropriate environment.",
+               "criticalSuccess": "",
+               "success": "You move through the enemy's space, treating the squares in its space as difficult terrain (every 5 feet costs 10 feet of movement). If you don't have enough Speed to move all the way through its space, you get the same effect as a failure.",
+               "failure": "Your movement ends, and you trigger reactions as if you had moved out of the square you started in.",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Maneuver in Flight (trained) (1)",
+               "requirements": "",
+               "description": "You try a difficult maneuver while flying. Attempt an Acrobatics check. The GM determines what maneuvers are possible, but they rarely allow you to move farther than your fly Speed.",
+               "criticalSuccess": "",
+               "success": "You succeed at the maneuver.",
+               "failure": "Your maneuver fails. The GM chooses if you simply can't move or if some other detrimental effect happens. The outcome should be appropriate for the maneuver you attempted (for instance, being blown off course if you were trying to fly against a strong wind).",
+               "criticalFailure": "As failure, but the consequence is more dire.",
+               "samples": "Trained: steep ascent or descent; Expert: fly against the wind, hover midair; Master: reverse direction; Legendary fly through gale force winds"
+            }, {
+               "name": "Squeeze (trained)",
+               "requirements": "",
+               "description": "You contort yourself to squeeze through a space so small you can barely fit through. This action is for exceptionally small spaces; many tight spaces are difficult terrain that you can move through more quickly and without a check.",
+               "criticalSuccess": "You squeeze through the tight space in 1 minute per 10 feet of squeezing.",
+               "success": "You squeeze through in 1 minute per 5 feet.",
+               "failure": "",
+               "criticalFailure": "You become stuck in the tight space. While you're stuck, you can spend 1 minute attempting another Acrobatics check at the same DC. Any result on that check other than a criticalFailure causes you to become unstuck.",
+               "samples": "Trained: space barely fitting your shoulders; Master: space barely fitting your head"
+            }]
+        }, {
+            "id": "1",
+            "title": "Arcana",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Decipher Writing (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Identify Magic (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Learn a Spell (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Borrow an Arcane Spell (trained)",
+               "requirements": "",
+               "description": "If you're an arcane spellcaster who prepares from a spellbook, you can attempt to prepare a spell from someone else's spellbook. The GM sets the DC for the check based on the spell's level and rarity; it's typically a bit easier than Learning the Spell.",
+               "criticalSuccess": "",
+               "success": "You prepare the borrowed spell as part of your normal spell preparation.",
+               "failure": "You fail to prepare the spell, but the spell slot remains available for you to prepare a different spell. You can't try to prepare this spell until the next time you prepare spells.",
+               "criticalFailure": "",
+               "samples": ""
+            }]
+           }, {
+            "id": "2",
+            "title": "Athletics",
+            "propOne": [{
+               "name": "Climb (1)",
+               "requirements": "",
+               "description": "You move up, down, or across an incline. Unless it's particularly easy, you must attempt an Athletics check. The GM determines the DC based on the nature of the incline and environmental circumstances. You're flat-footed unless you have a climb Speed.",
+               "criticalSuccess": "You move up, across, or safely down the incline for 5 feet plus 5 feet per 20 feet of your land Speed (a total of 10 feet for most PCs).",
+               "success": "You move up, across, or safely down the incline for 5 feet per 20 feet of your land Speed (a total of 5 feet for most PCs, minimum 5 feet if your Speed is below 20 feet).",
+               "failure": "",
+               "criticalFailure": "You fall. If you began the climb on stable ground, you fall and land prone.",
+               "samples": "Untrained: ladder, steep slope, low-branched tree; Trained: rigging, rope, typical tree; Expert: wall with small handholds and footholds; Master: ceiling with handholds and footholds, rock wall; Legendary: smooth surface."
+            }, {
+               "name": "Force Open (1)",
+               "requirements": "",
+               "description": "Using your body, a lever, or some other tool, you attempt to forcefully open a door, window, container or heavy gate. With a high enough result, you can even smash through walls. Without a crowbar, prying something open takes a -2 item penalty to the Athletics check to Force Open.",
+               "criticalSuccess": "You open the door, window, container, or gate and can avoid damaging it in the process.",
+               "success": "You break the door, window, container, or gate open, and the door, window, container, or gate gains the broken condition. If it's especially sturdy, the GM might have it take damage but not be broken.",
+               "failure": "",
+               "criticalFailure": "Your attempt jams the door, window, container, or gate shut, imposing a -2 circumstance penalty on future attempts to Force it Open.",
+               "samples": "Untrained: fabric, flimsy glass; Trained: ice, sturdy glass; Expert: flimsy wooden door, wooden portcullis; Master: sturdy wooden door, iron portcullis, metal bar; Legendary: stone or iron door."
+            }, {
+               "name": "Grapple (1)",
+               "requirements": "You have at least one free hand or have your target grappled or restrained. Your target isn't more than one size larger than you.",
+               "description": "You attempt to grab a creature or object with your free hand. Attempt an Athletics check against the target's Fortitude DC. You can Grapple a target you already have grabbed or restrained without having a hand free.",
+               "criticalSuccess": "Your target is restrained until the end of your next turn unless you move or your target Escapes.",
+               "success": "Your target is grabbed until the end of your next turn unless you move or your target Escapes.",
+               "failure": "You fail to grab your target. If you already had the target grabbed or restrained using a Grapple, those conditions on that creature or object end.",
+               "criticalFailure": "If you already had the target grabbed or restrained, it breaks free. Your target can either grab you, as if it succeeded at using the Grapple action against you, or force you to fall and land prone.",
+               "samples": ""
+            }, {
+               "name": "High Jump (2)",
+               "requirements": "",
+               "description": "You Stride, then make a vertical Leap and attempt a DC 30 Athletics check to increase the height of your jump. If you didn't Stride at least 10 feet, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM.",
+               "criticalSuccess": "Increase the maximum vertical distance to 8 feet, or increase the maximum vertical distance to 5 feet and maximum horizontal distance to 10 feet.",
+               "success": "Increase the maximum vertical distance to 5 feet.",
+               "failure": "You Leap normally.",
+               "criticalFailure": "You don't Leap at all, and instead you fall prone in your space.",
+               "samples": ""
+            }, {
+               "name": "Long Jump (2)",
+               "requirements": "",
+               "description": "You Stride, then make a horizontal Leap and attempt an Athletics check to increase the length of your jump. The DC of the Athletics check is equal to the total distance in feet you're attempting to move during your Leap (so you'd need to succeed at a DC 20 check to Leap 20 feet). You can't Leap farther than your Speed. If you didn't Stride at least 10 feet, or if you attempt to jump in a different direction than your Stride, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM.",
+               "criticalSuccess": "",
+               "success": "Increase the maximum horizontal distance you Leap to the desired distance.",
+               "failure": "You Leap normally.",
+               "criticalFailure": "You Leap normally, but then fall and land prone.",
+               "samples": ""
+            }, {
+               "name": "Shove (1)",
+               "requirements": "You have at least one hand free. The target can't be more than one size larger than you.",
+               "description": "You push a creature away from you. Attempt an Athletics check against your target's Fortitude DC.",
+               "criticalSuccess": "You push your target up to 10 feet away from you. You can Stride after it, but you must move the same distance and in the same direction.",
+               "success": "You push your target back 5 feet. You can Stride after it, but you must move the same distance and in the same direction.",
+               "failure": "",
+               "criticalFailure": "You lose your balance, fall, and land prone.",
+               "samples": ""
+            }, {
+                "name": "Swim (1)",
+                "requirements": "",
+                "description": "You propel yourself through water. In most calm water, you succeed at the action without needing to attempt a check. If you must breathe air and you're submerged in water, you must hold your breath each round. If you fail to hold your breath, you begin to drown. If the water you are swimming in is turbulent or otherwise dangerous, you might have to attempt an Athletics check to Swim. If you end your turn in water and haven't succeeded at a Swim action that turn, you sink 10 feet or get moved by the current, as determined by the GM. However, if your last action on your turn was to enter the water, you don't sink or move with the current that turn.",
+                "criticalSuccess": "You move through the water 10 feet, plus 5 feet per 20 feet of your land Speed (a total of 15 feet for most PCs).",
+                "success": "You move through the water 5 feet, plus 5 feet per 20 feet of your land Speed (a total of 10 feet for most PCs).",
+                "failure": "",
+                "criticalFailure": "You make no progress, and if you're holding your breath, you lose 1 round of air.",
+                "samples": "Untrained: lake or other still water; Trained: flowing water, like a river; Expert: swiftly flowing river; Master: stormy sea; Legendary: maelstrom, waterfall."
+             }, {
+                "name": "Trip (1)",
+                "requirements": "You have at least one hand free. Your target can't be more than one size larger than you.",
+                "description": "You try to knock a creature to the ground. Attempt an Athletics check against the target's Reflex DC.",
+                "criticalSuccess": "The target falls and lands prone and takes 1d6 bludgeoning damage.",
+                "success": "The target falls and lands prone.",
+                "failure": "",
+                "criticalFailure": "You lose your balance and fall and land prone.",
+                "samples": ""
+             }, {
+                "name": "Disarm (trained) (1)",
+                "requirements": "You have at least one hand free. The target can't be more than one size larger than you.",
+                "description": "You try to knock something out of a creature's grasp. Attempt an Athletics check against the target's Reflex DC.",
+                "criticalSuccess": "You knock the item out of the target's grasp. It falls to the ground in the target's space.",
+                "success": "You weaken your target's grasp on the item. Until the start of that creature's turn, attempts to Disarm the target of that item gain a +2 circumstance bonus, and the target takes a -2 circumstance penalty to attacks with the item or other checks requiring a firm grasp on the item.",
+                "failure": "",
+                "criticalFailure": "You lose your balance and become flat-footed until the start of your next turn.",
+                "samples": ""
+             }]
+           }, {
+            "id": "3",
+            "title": "Crafting",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Repair",
+               "requirements": "You have a repair kit.",
+               "description": "You spend 10 minutes attempting to fix a damaged item, placing the item on a stable surface and using the repair kit with both hands. The GM sets the DC, but it's usually about the same DC to Repair a given item as it is to Craft it in the first place. You can't Repair a destroyed item.",
+               "criticalSuccess": "You restore 10 Hit Points to the item, plus an additional 10 Hit Points per proficiency rank you have in Crafting (a total of 20 HP if you're trained, 30 HP if you're an expert, 40 HP if you're a master, or 50 HP if you're legendary).",
+               "success": "You restore 5 Hit Points to the item, plus an additional 5 per proficiency rank you have in Crafting (for a total of 10 HP if you are trained, 15 HP if you're an expert, 20 HP if you're a master, or 25 HP if you're legendary).",
+               "failure": "",
+               "criticalFailure": "You deal 2d6 damage to the item. Apply the item's Hardness to this damage.",
+               "samples": ""
+            }, {
+               "name": "Earn Income (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Craft (trained)",
+               "requirements": "1) The item is your level or lower. An item that doesn't list a level is level 0. If the item is 9th level or higher, you must be a master in Crafting, and if it's 16th or higher, you must be legendary. 2) You have the formula for the item. 3) You have an appropriate set of tools and, in many cases, a workshop. 4) You must supply raw materials worth at least half the item's Price. You always expend at least that amount of raw materials when you Craft successfully. If you're in a settlement, you can usually spend currency to get the amount of raw materials you need, except in the case of rarer precious materials.",
+               "description": "You can make an item from raw materials. You need the Alchemical Crafting skill feat to create alchemical items, the Magical Crafting skill feat to create magic items, and the Snare Crafting feat to create snares. You must spend 4 days at work, at which point you attempt a Crafting check. The GM determines the DC to Craft the item based on its level, rarity, and other circumstances. If your attempt to create the item is successful, you expend the raw materials you supplied. You can pay the remaining portion of the item's Price in materials to complete the item immediately, or you can spend additional downtime days working on it. For each additional day you spend, reduce the value of the materials you need to expend to complete the item. After any of these downtime days, you can complete the item by spending the remaining portion of its Price in materials. If the downtime days you spend are interrupted, you can return to finish the item later, continuing where you left off.",
+               "criticalSuccess": "Your attempt is successful. Each additional day spent Crafting reduces the materials needed to complete the item by an amount based on your level + 1 and your proficiency rank in Crafting.",
+               "success": "Your attempt is successful. Each additional day spent Crafting reduces the materials needed to complete the item by an amount based on your level and your proficiency rank.",
+               "failure": "You fail to complete the item. You can salvage the raw materials you supplied for their full value. If you want to try again, you must start over.",
+               "criticalFailure": "You fail to complete the item. You ruin 10% of the raw materials you supplied, but you can salvage the rest. If you want to try again, you must start over.",
+               "samples": ""
+            }, {
+               "name": "Identify Alchemy (trained)",
+               "requirements": "You have alchemist's tools.",
+               "description": "You can identify the nature of an alchemical item with 10 minutes of testing using alchemist's tools. If your attempt is interrupted in any way, you must start over.",
+               "criticalSuccess": "",
+               "success": "You identify the item and the means of activating it.",
+               "failure": "You fail to identify the item but can try again.",
+               "criticalFailure": "You misidentify the item as another item of the GM's choice.",
+               "samples": ""
+            }]
+           }, {
+            "id": "4",
+            "title": "Deception",
+            "propOne": [{
+               "name": "Create a Diversion (1)",
+               "requirements": "",
+               "description": "With a gesture, a trick, or some distracting words, you can create a diversion that draws creatures' attention elsewhere. If you use a gesture or trick, this action gains the manipulate trait. If you use distracting words, it gains the auditory and linguistic traits. Attempt a single Deception check and compare it to the Perception DCs of the creatures whose attention you're trying to divert. Whether or not you succeed, creatures you attempt to divert gain a +4 circumstance bonus to their Perception DCs against your attempts to Create a Diversion for 1 minute.",
+               "criticalSuccess": "",
+               "success": "You become hidden to each creature whose Perception DC is less than or equal to your result. (The hidden condition allows you to Sneak away.) This lasts until the end of your turn or until you do anything except Step or use the Hide or the Sneak action of the Stealth skill. If you Strike a creature, the creature remains flat-footed against that attack, and you then become observed. If you do anything else, you become observed just before you act unless the GM determines otherwise.",
+               "failure": "You don't divert the attention of any creatures whose Perception DC exceeds your result, and those creatures are aware you were trying to trick them.",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Impersonate",
+               "requirements": "",
+               "description": "You create a disguise to pass yourself off as someone or something you are not. Assembling a convincing disguise takes 10 minutes and requires a disguise kit, but a simpler, quicker disguise might do the job if you're not trying to imitate a specific individual, at the G''s discretion. In most cases, creatures have a chance to detect your deception only if they use the Seek action to attempt Perception checks against your Deception DC. If you attempt to directly interact with someone while disguised, the GM rolls a secret Deception check for you against that creature's Perception DC instead. If you're disguised as a specific individual, the GM might give creatures you interact with a circumstance bonus based on how well they know the person you're imitating, or the GM might roll a secret Deception check even if you aren't directly interacting with others.",
+               "criticalSuccess": "",
+               "success": "You trick the creature into thinking you're the person you're disguised as. You might have to attempt a new check if your behavior changes.",
+               "failure": "The creature can tell you're not who you claim to be.",
+               "criticalFailure": "The creature can tell you're not who you claim to be, and it recognizes you if it would know you without a disguise.",
+               "samples": ""
+            }, {
+               "name": "Lie",
+               "requirements": "",
+               "description": "You try to fool someone with an untruth. Doing so takes at least 1 round, or longer if the lie is elaborate. You roll a single Deception check and compare it against the Perception DC of every creature you are trying to fool. The GM might give them a circumstance bonus based on the situation and the nature of the lie you are trying to tell. Elaborate or highly unbelievable lies are much harder to get a creature to believe than simpler and more believable lies, and some lies are so big that it's impossible to get anyone to believe them. At the GM's discretion, if a creature initially believes your lie, it might attempt a Perception check later to Sense Motive against your Deception DC to realize it's a lie. This usually happens if the creature discovers enough evidence to counter your statements.",
+               "criticalSuccess": "",
+               "success": "The target believes your lie.",
+               "failure": "The target doesn't believe your lie and gains a +4 circumstance bonus against your attempts to Lie for the duration of your conversation. The target is also more likely to be suspicious of you in the future.",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Feint (trained) (1)",
+               "requirements": "You are within melee reach of the opponent you attempt to Feint.",
+               "description": "With a misleading flourish, you leave an opponent unprepared for your real attack. Attempt a Deception check against that opponent's Perception DC.",
+               "criticalSuccess": "You throw your enemy's defenses against you entirely off. The target is flat-footed against melee attacks that you attempt against it until the end of your next turn.",
+               "success": "Your foe is fooled, but only momentarily. The target is flat-footed against the next melee attack that you attempt against it before the end of your current turn.",
+               "failure": "",
+               "criticalFailure": "Your feint backfires. You are flat-footed against melee attacks the target attempts against you until the end of your next turn.",
+               "samples": ""
+            }]
+           }, {
+            "id": "5",
+            "title": "Diplomacy",
+            "propOne": [{
+               "name": "Gather Information",
+               "requirements": "",
+               "description": "You canvass local markets, taverns, and gathering places in an attempt to learn about a specific individual or topic. The GM determines the DC of the check and the amount of time it takes (typically 2 hours, but sometimes more), along with any benefit you might be able to gain by spending coin on bribes, drinks, or gifts.",
+               "criticalSuccess": "",
+               "success": "You collect information about the individual or topic. The GM determines the specifics.",
+               "failure": "",
+               "criticalFailure": "You collect incorrect information about the individual or topic.",
+               "samples": "Untrained: talk of the town; Trained: common rumor; Expert: obscure rumor, poorly guarded secret; Master well-guarded or esoteric information; Legendary: information known only to an incredibly select few, or only to extraordinary beings."
+            }, {
+               "name": "Make an Impression",
+               "requirements": "",
+               "description": "With at least 1 minute of conversation, during which you engage in charismatic overtures, flattery, and other acts of goodwill, you seek to make a good impression on someone to make them temporarily agreeable. At the end of the conversation, attempt a Diplomacy check against the Will DC of one target, modified by any circumstances the GM sees fit. Good impressions (or bad impressions, on a criticalFailure) last for only the current social interaction unless the GM decides otherwise.",
+               "criticalSuccess": "The target's attitude toward you improves by two steps.",
+               "success": "The target's attitude toward you improves by one step.",
+               "failure": "",
+               "criticalFailure": "The target's attitude toward you decreases by one step.",
+               "samples": ""
+            }, {
+               "name": "Request (1)",
+               "requirements": "",
+               "description": "You can make a request of a creature that's friendly or helpful to you. You must couch the request in terms that the target would accept given their current attitude toward you. The GM sets the DC based on the difficulty of the request. Some requests are unsavory or impossible, and even a helpful NPC would never agree to them.",
+               "criticalSuccess": "The target agrees to your request without qualifications.",
+               "success": "The target agrees to your request, but they might demand added provisions or alterations to the request.",
+               "failure": "The target refuses the request, though they might propose an alternative that is less extreme.",
+               "criticalFailure": "Not only does the target refuse the request, but their attitude toward you decreases by one step due to the temerity of the request.",
+               "samples": ""
+            }]
+           }, {
+            "id": "6",
+            "title": "Intimidation",
+            "propOne": [{
+               "name": "Coerce",
+               "requirements": "",
+               "description": "With threats either veiled or overt, you attempt to bully a creature into doing what you want. You must spend at least 1 minute of conversation with a creature you can see and that can either see or sense you. At the end of the conversation, attempt an Intimidation check against the target's Will DC, modified by any circumstances the GM determines.",
+               "criticalSuccess": "The target gives you the information you seek or agrees to follow your directives so long as they aren't likely to harm the target in any way. The target continues to comply for an amount of time determined by the GM but not exceeding 1 day, at which point the target becomes unfriendly (if they weren't already unfriendly or hostile). However, the target is too scared of you to retaliate—at least in the short term.",
+               "success": "As criticalSuccess, but once the target becomes unfriendly, they might decide to act against you—for example, by reporting you to the authorities or assisting your enemies.",
+               "failure": "The target doesn't do what you say, and if they were not already unfriendly or hostile, they become unfriendly.",
+               "criticalFailure": "The target refuses to comply, becomes hostile if they weren't already, and can't be Coerced by you for at least 1 week.",
+               "samples": ""
+            }, {
+               "name": "Demoralize (1)",
+               "requirements": "",
+               "description": "With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve. Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a –4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.",
+               "criticalSuccess": "The target becomes frightened 2.",
+               "success": "The target becomes frightened 1.",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }]
+           }, {
+            "id": "7",
+            "title": "Lore",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Earn Income (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }]
+           }, {
+            "id": "8",
+            "title": "Medicine",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Administer First Aid (2)",
+               "requirements": "You are holding healer's tools, or you are wearing them and have a hand free",
+               "description": "You perform first aid on an adjacent creature that is dying or bleeding. If a creature is both dying and bleeding, choose which ailment you're trying to treat before you roll. You can Administer First Aid again to attempt to remedy the other effect. | STABILIZE:  Attempt a Medicine check on a creature that has 0 Hit Points and the dying condition. The DC is equal to 5 + that creature's recovery roll DC (typically 15 + its dying value). | STOP BLEEDING: Attempt a Medicine check on a creature that is taking persistent bleed damage, giving them a chance to make another flat check to remove the persistent damage. The DC is usually the DC of the effect that caused the bleed.",
+               "criticalSuccess": "",
+               "success": "If you're trying to stabilize, the creature loses the dying condition (but remains unconscious). If you're trying to stop bleeding, the creature attempts a flat check to end the bleeding.",
+               "failure": "",
+               "criticalFailure": " If you were trying to stabilize, the creature's dying value increases by 1. If you were trying to stop bleeding, it immediately takes an amount of damage equal to its persistent bleed damage.",
+               "samples": ""
+            }, {
+               "name": "Treat Disease (trained)",
+               "requirements": "You are holding healer's tools, or you are wearing them and have a hand free",
+               "description": "You spend at least 8 hours caring for a diseased creature. Attempt a Medicine check against the disease's DC. After you attempt to Treat a Disease for a creature, you can't try again until after that creature's next save against the disease.",
+               "criticalSuccess": "You grant the creature a +4 circumstance bonus to its next saving throw against the disease.",
+               "success": "You grant the creature a +2 circumstance bonus to its next saving throw against the disease.",
+               "failure": "",
+               "criticalFailure": "Your efforts cause the creature to take a –2 circumstance penalty to its next save against the disease.",
+               "samples": ""
+            }, {
+               "name": "Treat Poison (trained) (1)",
+               "requirements": "You are holding healer's tools, or you are wearing them and have a hand free",
+               "description": "You treat a patient to prevent the spread of poison. Attempt a Medicine check against the poison's DC. After you attempt to Treat a Poison for a creature, you can't try again until after the next time that creature attempts a save against the poison.",
+               "criticalSuccess": "You grant the creature a +4 circumstance bonus to its next saving throw against the poison.",
+               "success": "You grant the creature a +2 circumstance bonus to its next saving throw against the poison.",
+               "failure": "",
+               "criticalFailure": "Your efforts cause the creature to take a –2 circumstance penalty to its next save against the poison.",
+               "samples": ""
+            }, {
+               "name": "Treat Wounds (trained)",
+               "requirements": "You are holding healer's tools, or you are wearing them and have a hand free",
+               "description": "You spend 10 minutes treating one injured living creature (targeting yourself, if you so choose). The target is then temporarily immune to Treat Wounds actions for 1 hour, but this interval overlaps with the time you spent treating (so a patient can be treated once per hour, not once per 70 minutes). The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert in Medicine, you can instead attempt a DC 20 check to increase the Hit Points regained by 10; if you're a master of Medicine, you can instead attempt a DC 30 check to increase the Hit Points regained by 30; and if you're legendary, you can instead attempt a DC 40 check to increase the Hit Points regained by 50. The damage dealt on a criticalFailure remains the same. If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds. The result of your Medicine check determines how many Hit Points the target regains.",
+               "criticalSuccess": "The target regains 4d8 Hit Points, and its wounded condition is removed.",
+               "success": "The target regains 2d8 Hit Points, and its wounded condition is removed.",
+               "failure": "",
+               "criticalFailure": "The target takes 1d8 damage.",
+               "samples": "",
+               "table": [
+                    ["Proficiency", "DC", "Success", "criticalSuccess"],
+                    ["Trained", "15", "2d8", "4d8"],
+                    ["Expert", "20", "2d8+10", "4d8+10"],
+                    ["Master", "30", "2d8+30", "4d8+30"],
+                    ["Legendary", "40", "2d8+50", "4d8+50"]
+               ]
+            }]
+           }, {
+            "id": "9",
+            "title": "Nature",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Command an Animal (1)",
+               "requirements": "",
+               "description": "You issue an order to an animal. Attempt a Nature check against the animal's Will DC. The GM might adjust the DC if the animal has a good attitude toward you, you suggest a course of action it was predisposed toward, or you offer it a treat. You automatically fail if the animal is hostile or unfriendly to you. If the animal is helpful to you, increase your degree of success by one step. You might be able to Command an Animal more easily with a feat like Ride. Most animals know the Drop Prone, Leap, Seek, Stand, Stride, and Strike basic actions. If an animal knows an activity, such as a horse's Gallop, you can Command the Animal to perform the activity, but you must spend as many actions on Command an Animal as the activity's number of actions. You can also spend multiple actions to Command the Animal to perform that number of basic actions on its next turn; for instance, you could spend 3 actions to Command an Animal to Stride three times or to Stride twice and then Strike.",
+               "criticalSuccess": "",
+               "success": "The animal does as you command on its next turn.",
+               "failure": "The animal is hesitant or resistant, and it does nothing.",
+               "criticalFailure": "The animal misbehaves or misunderstands, and it takes some other action determined by the GM.",
+               "samples": ""
+            }, {
+               "name": "Identify Magic (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Learn a Spell (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }]
+           }, {
+            "id": "10",
+            "title": "Occultism",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Decipher Writing (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Identify Magic (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Learn a Spell (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }]
+           }, {
+            "id": "11",
+            "title": "Performance",
+            "propOne": [{
+               "name": "Perform (1)",
+               "requirements": "",
+               "description": "When making a brief performance—one song, a quick dance, or a few jokes—you use the Perform action. This action is most useful when you want to prove your capability or impress someone quickly. Performing rarely has an impact on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers—or even change their attitudes—if the GM sees fit.",
+               "criticalSuccess": "Your performance impresses the observers, and they're likely to share stories of your ability.",
+               "success": "You prove yourself, and observers appreciate the quality of your performance.",
+               "failure": "Your performance falls flat.",
+               "criticalFailure": "You demonstrate only incompetence.",
+               "samples": "Untrained: audience of commoners; Trained: audience of artisans; Expert: audience of merchants or minor nobles; Master: audience of high nobility or minor royalty; Legendary: audience of major royalty or otherworldly beings."
+            }, {
+               "name": "Earn Income (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }]
+           }, {
+            "id": "12",
+            "title": "Religion",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Decipher Writing (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Identify Magic (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Learn a Spell (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }]
+           }, {
+            "id": "13",
+            "title": "Society",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Subsist",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Decipher Writing (trained)",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Create Forgery (trained)",
+               "requirements": "",
+               "description": "You create a forged document, usually over the course of a day or a week. You must have the proper writing material to create a forgery. When you Create a Forgery, the GM rolls a secret DC 20 Society check. If you succeed, the forgery is of good enough quality that passive observers can't notice the fake. Only those who carefully examine the document and attempt a Perception or Society check against your Society DC can do so. If the document's handwriting doesn't need to be specific to a person, you need only to have seen a similar document before, and you gain up to a +4 circumstance bonus to your check, as well as to your DC (the GM determines the bonus). To forge a specific person's handwriting, you need a sample of that person's handwriting. If your check result was below 20, the forgery has some obvious signs of being a fake, so the GM compares your result to each passive observer's Perception DC or Society DC, whichever is higher, using the success or failure results below. Once the GM rolls your check for a document, that same result is used against all passive observers' DCs no matter how many creatures passively observe that document. An observer who was fooled on a passive glance can still choose to closely scrutinize the documents on the lookout for a forgery, using different techniques and analysis methods beyond the surface elements you successfully forged with your original check. In that case, the observer can attempt a Perception or Society check against your Society DC (if they succeed, they know your document is a forgery).",
+               "criticalSuccess": "",
+               "success": "The observer does not detect the forgery.",
+               "failure": "The observer knows your document is a forgery.",
+               "criticalFailure": "",
+               "samples": ""
+            }]
+           }, {
+            "id": "14",
+            "title": "Stealth",
+            "propOne": [{
+               "name": "Conceal an Object (1)",
+               "requirements": "",
+               "description": "You hide a small object on your person (such as a weapon of light Bulk). When you try to sneak a concealed object past someone who might notice it, the GM rolls your Stealth check and compares it to this passive observer's Perception DC. Once the GM rolls your check for a concealed object, that same result is used no matter how many passive observers you try to sneak it past. If a creature is specifically searching you for an item, it can attempt a Perception check against your Stealth DC (finding the object on success). You can also conceal an object somewhere other than your person, such as among undergrowth or in a secret compartment within a piece of furniture. In this case, characters Seeking in an area compare their Perception check results to your Stealth DC to determine whether they find the object.",
+               "criticalSuccess": "",
+               "success": "The object remains undetected.",
+               "failure": "The searcher finds the object.",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Hide (1)",
+               "requirements": "",
+               "description": "You huddle behind cover or greater cover or deeper into concealment to become hidden, rather than observed. The GM rolls your Stealth check in secret and compares the result to the Perception DC of each creature you're observed by but that you have cover or greater cover against or are concealed from. You gain the circumstance bonus from cover or greater cover to your check.",
+               "criticalSuccess": "",
+               "success": "If the creature could see you, you're now hidden from it instead of observed. If you were hidden from or undetected by the creature, you retain that condition. If you successfully become hidden to a creature but then cease to have cover or greater cover against it or be concealed from it, you become observed again. You cease being hidden if you do anything except Hide, Sneak, or Step. If you attempt to Strike a creature, the creature remains flat-footed against that attack, and you then become observed. If you do anything else, you become observed just before you act unless the GM determines otherwise. The GM might allow you to perform a particularly unobtrusive action without being noticed, possibly requiring another Stealth check. If a creature uses Seek to make you observed by it, you must successfully Hide to become hidden from it again.",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Sneak (1)",
+               "requirements": "",
+               "description": "You can attempt to move to another place while becoming or staying undetected. Stride up to half your Speed. (You can use Sneak while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type; you must move at half that Speed.) If you're undetected by a creature and it's impossible for that creature to observe you (for a typical creature, this includes when you're invisible, the observer is blinded, or you're in darkness and the creature can't see in darkness), for any criticalFailure you roll on a check to Sneak, you get a failure instead. You also continue to be undetected if you lose cover or greater cover against or are no longer concealed from such a creature. At the end of your movement, the GM rolls your Stealth check in secret and compares the result to the Perception DC of each creature you were hidden from or undetected by at the start of your movement. If you have cover or greater cover from the creature throughout your Stride, you gain the +2 circumstance bonus from cover (or +4 from greater cover) to your Stealth check. Because you're moving, the bonus increase from Taking Cover doesn't apply. You don't get to roll against a creature if, at the end of your movement, you neither are concealed from it nor have cover or greater cover against it. You automatically become observed by such a creature.",
+               "criticalSuccess": "",
+               "success": "You're undetected by the creature during your movement and remain undetected by the creature at the end of it. You become observed as soon as you do anything other than Hide, Sneak, or Step. If you attempt to Strike a creature, the creature remains flat-footed against that attack, and you then become observed. If you do anything else, you become observed just before you act unless the GM determines otherwise. The GM might allow you to perform a particularly unobtrusive action without being noticed, possibly requiring another Stealth check. If you speak or make a deliberate loud noise, you become hidden instead of undetected. If a creature uses Seek and you become hidden to it as a result, you must Sneak if you want to become undetected by that creature again.",
+               "failure": "A telltale sound or other sign gives your position away, though you still remain unseen. You're hidden from the creature throughout your movement and remain so.",
+               "criticalFailure": "You're spotted! You're observed by the creature throughout your movement and remain so. If you're invisible and were hidden from the creature, instead of being observed you're hidden throughout your movement and remain so.",
+               "samples": ""
+            }]
+           }, {
+            "id": "15",
+            "title": "Survival",
+            "propOne": [{
+               "name": "Subsist",
+               "requirements": "",
+               "description": "see Multiskill Actions",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Sense Direction",
+               "requirements": "",
+               "description": "Using the stars, the position of the sun, traits of the geography or flora, or the behavior of fauna, you can stay oriented in the wild. Typically, you attempt a Survival check only once per day, but some environments or changes might necessitate rolling more often. The GM determines the DC and how long this activity takes (usually just a minute or so). More unusual locales or those you're unfamiliar with might require you to have a minimum proficiency rank to Sense Direction. Without a compass, you take a –2 item penalty to checks to Sense Direction.",
+               "criticalSuccess": "You get an excellent sense of where you are. If you are in an environment with cardinal directions, you know them exactly.",
+               "success": "You gain enough orientation to avoid becoming hopelessly lost. If you are in an environment with cardinal directions, you have a sense of those directions.",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": "Untrained: determine a cardinal direction using the sun; Trained: find an overgrown path in a forest; Expert: navigate a hedge maze; Master: navigate a byzantine labyrinth or relatively featureless desert; Legendary: navigate an ever-changing dream realm."
+            }, {
+               "name": "Cover Tracks (trained)",
+               "requirements": "",
+               "description": "You cover your tracks, moving up to half your travel speed. You don't need to attempt a Survival check to cover your tracks, but anyone tracking you must succeed at a Survival check against your Survival DC if it is higher than the normal DC to Track. In some cases, you might Cover Tracks in an encounter. In this case, Cover Tracks is a single action and doesn't have the exploration trait.",
+               "criticalSuccess": "",
+               "success": "",
+               "failure": "",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Track (trained)",
+               "requirements": "",
+               "description": "You follow tracks, moving at up to half your travel speed. After a successful check to Track, you can continue following the tracks at half your Speed without attempting additional checks for up to 1 hour. In some cases, you might Track in an encounter. In this case, Track is a single action and doesn't have the exploration trait, but you might need to roll more often because you're in a tense situation. The GM determines how often you must attempt this check. You attempt your Survival check when you start Tracking, once every hour you continue tracking, and any time something significant changes in the trail. The GM determines the DCs for such checks, depending on the freshness of the trail, the weather, and the type of ground.",
+               "criticalSuccess": "",
+               "success": "You find the trail or continue to follow the one you're already following.",
+               "failure": "You lose the trail but can try again after a 1-hour delay.",
+               "criticalFailure": "You lose the trail and can't try again for 24 hours.",
+               "samples": "Untrained: the path of a large army following a road; Trained: relatively fresh tracks of a rampaging bear through the plains; Expert: a nimble panther's tracks through a jungle, tracks obscured by rainfall; Master: tracks obscured by winter snow, tracks of a mouse or smaller creature, tracks left on surfaces that can't hold prints like bare rock; Legendary: old tracks through a windy desert's sands, tracks after a major blizzard or hurricane."
+            }]
+           }, {
+            "id": "16",
+            "title": "Thievery",
+            "propOne": [{
+               "name": "Palm an Object (1)",
+               "requirements": "",
+               "description": "Palming a small, unattended object without being noticed requires you to roll a single Thievery check against the Perception DCs of all creatures who are currently observing you. You take the object whether or not you successfully conceal that you did so. You can typically only Palm Objects of negligible Bulk, though the GM might determine otherwise depending on the situation.",
+               "criticalSuccess": "",
+               "success": "The creature does not notice you Palming the Object.",
+               "failure": "The creature notices you Palming the Object, and the GM determines the creature's response.",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Steal (1)",
+               "requirements": "",
+               "description": "You try to take a small object from another creature without being noticed. Typically, you can Steal only an object of negligible Bulk, and you automatically fail if the creature who has the object is in combat or on guard. Attempt a Thievery check to determine if you successfully Steal the object. The DC to Steal is usually the Perception DC of the creature wearing the object. This assumes the object is worn but not closely guarded (like a loosely carried pouch filled with coins, or an object within such a pouch). If the object is in a pocket or similarly protected, you take a –5 penalty to your Thievery check. The GM might increase the DC of your check if the nature of the object makes it harder to steal (such as a very small item in a large pack, or a sheet of parchment mixed in with other documents). You might also need to compare your Thievery check result against the Perception DCs of observers other than the person wearing the object. The GM may increase the Perception DCs of these observers if they're distracted.",
+               "criticalSuccess": "",
+               "success": "You steal the item without the bearer noticing, or an observer doesn't see you take or attempt to take the item.",
+               "failure": "The item's bearer notices your attempt before you can take the object, or an observer sees you take or attempt to take the item. The GM determines the response of any creature that notices your theft.",
+               "criticalFailure": "",
+               "samples": ""
+            }, {
+               "name": "Disable Device (trained) (2)",
+               "requirements": "Some devices require you to use thieves' tools when disabling them.",
+               "description": "This action allows you to disarm a trap or another complex device. Often, a device requires numerous successes before becoming disabled, depending on its construction and complexity. Thieves' tools are helpful and sometimes even required to Disable a Device, as determined by the GM, and sometimes a device requires a higher proficiency rank in Thievery to disable it. Your Thievery check result determines how much progress you make.",
+               "criticalSuccess": "You disable the device, or you achieve two successes toward disabling a complex device. You leave no trace of your tampering, and you can rearm the device later, if that type of device can be rearmed.",
+               "success": "You disable the device, or you achieve one success toward disabling a complex device.",
+               "failure": "",
+               "criticalFailure": "You trigger the device.",
+               "samples": ""
+            }, {
+               "name": "Pick a Lock (2)",
+               "requirements": "You have thieves' tools.",
+               "description": "Opening a lock without a key is very similar to Disabling a Device, but the DC of the check is determined by the complexity and construction of the lock you are attempting to pick (locks and their DCs are found in their description). Locks of higher qualities might require multiple successes to unlock, since otherwise even an unskilled burglar could easily crack the lock by attempting the check until they rolled a natural 20. If you lack the proper tools, the GM might let you used improvised picks, which are treated as shoddy tools, depending on the specifics of the lock.",
+               "criticalSuccess": "You unlock the lock, or you achieve two successes toward opening a complex lock. You leave no trace of your tampering.",
+               "success": " You open the lock, or you achieve one success toward opening a complex lock.",
+               "failure": "",
+               "criticalFailure": "You break your tools. Fixing them requires using Crafting to Repair them or else swapping in replacement picks (costing 3 sp, or 3 gp for infiltrator thieves' tools).",
+               "samples": ""
+            }]
+           }, {
+            "id": "17",
+            "title": "Multiskill Actions",
+            "propOne": [{
+               "name": "Recall Knowledge (1)",
+               "requirements": "",
+               "description": "To remember useful information on a topic, you can attempt to Recall Knowledge. You might know basic information about something without needing to attempt a check, but Recall Knowledge requires you to stop and think for a moment so you can recollect more specific facts and apply them. You might even need to spend time investigating first. In some cases, you can get the GM's permission to use a different but related skill, usually against a higher DC than normal. Some topics might appear on multiple lists, but the skills could give different information.",
+               "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+               "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+               "failure": "",
+               "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+               "samples": "Untrained: name of a ruler, key noble, or major deity; Trained: line of succession for a major noble family, core doctrines of a major deity; Expert: genealogy of a minor noble, teachings of an ancient priest; Master: hierarchy of a genie noble court, major extraplanar temples of a deity; Legendary: existence of a long-lost noble heir, secret doctrines of a religion.",
+               "table": [
+                    [ "Arcana", "Arcane theories, magical traditions, creatures of arcane significance, and arcane planes."],
+                    [ "Crafting", "Alchemical reactions and creatures, item value, engineering, unusual materials, and constructs." ],
+                    [ "Lore", "The subject of the Lore skill's subcategory."],
+                    [ "Medicine",  "Diseases, poisons, wounds, and forensics." ],
+                    [ "Nature", "The environment, flora, geography, weather, creatures of natural origin, and natural planes." ],
+                    [ "Occultism", "Ancient mysteries, obscure philosophy, creatures of occult significance, and esoteric planes." ],
+                    [ "Religion", "Divine agents, divine planes, theology, obscure myths, and creatures of religious significance." ],
+                    [ "Society", "Local history, key personalities, legal institutions, societal structure, and humanoid culture." ]
+                ]
+            }, {
+               "name": "Subsist",
+               "requirements": "",
+               "description": "You try to provide food and shelter for yourself, and possibly others as well, with a standard of living. The GM determines the DC based on the nature of the place where you're trying to Subsist. You might need a minimum proficiency rank to Subsist in particularly strange environments. Unlike most downtime activities, you can Subsist after 8 hours or less of exploration, but if you do, you take a –5 penalty.",
+               "criticalSuccess": "You either provide a subsistence living for yourself and one additional creature, or you improve your own food and shelter, granting yourself a comfortable living.",
+               "success": "You find enough food and shelter with basic protection from the elements to provide you a subsistence living.",
+               "failure": "You're exposed to the elements and don't get enough food, becoming fatigued until you attain sufficient food and shelter.",
+               "criticalFailure": "You attract trouble, eat something you shouldn't, or otherwise worsen your situation. You take a –2 circumstance penalty to checks to Subsist for 1 week. You don't find any food at all; if you don't have any stored up, you're in danger of starving or dying of thirst if you continue failing.",
+               "samples": "Untrained: lush forest with calm weather or large city with plentiful resources; Trained: typical hillside or village; Expert: typical mountains or insular hamlet; Master: typical desert or city under siege; Legendary: barren wasteland or city of undead.",
+               "table": [
+                    ["Society", "Subsist in a settlement by finding shelter, scrounging, or begging for food."],
+                    ["Survival", "Subsist in the wild by foraging for food and building shelter."]
+               ]
+            }, {
+               "name": "Decipher Writing (trained)",
+               "requirements": "",
+               "description": "You attempt to decipher complicated writing or literature on an obscure topic. This usually takes 1 minute per page of text, but might take longer (typically an hour per page for decrypting ciphers or the like). The text must be in a language you can read, though the GM might allow you to attempt to decipher text written in an unfamiliar language using Society instead. The DC is determined by the GM based on the state or complexity of the document. The GM might have you roll one check for a short text or a check for each section of a larger text.",
+               "criticalSuccess": "You understand the true meaning of the text.",
+               "success": "You understand the true meaning of the text. If it was a coded document, you know the general meaning but might not have a word-for-word translation.",
+               "failure": "You can't understand the text and take a -2 circumstance penalty to further checks to decipher it.",
+               "criticalFailure": "You believe you understand the text on that page, but you have in fact misconstrued its message.",
+               "samples": "Trained: entry-level philosophy treatise; Expert: complex code, such as a cipher; Master: spymaster's code or advanced research notes; Legendary: esoteric planar text written in metaphor by an ancient celestial.",
+               "table": [
+                    [ "Arcana", "Writings about arcane theory" ],
+                    [ "Occultism", "Writings about occult topics, including complex metaphysical systems, syncretic principles, weird philosophies, and incoherent ramblings" ],
+                    [ "Religion", "Writings of religious nature, including allegories, homilies, and proverbs" ],
+                    [ "Society", "A coded message, text written in an incomplete or archaic form, or in some cases, text in a language you don't know" ]
+               ]
+            }, {
+               "name": "Identify Magic (trained)",
+               "requirements": "",
+               "description": "Once you discover that an item, location, or ongoing effect is magical, you can spend 10 minutes to try to identify the particulars of its magic. If your attempt is interrupted, you must start over. The GM sets the DC for your check. Cursed or esoteric subjects usually have higher DCs or might even be impossible to identify using this activity alone. Heightening a spell doesn't increase the DC to identify it.",
+               "criticalSuccess": "You learn all the attributes of the magic, including its name (for an effect), what it does, any means of activating it (for an item or location), and whether it is cursed.",
+               "success": "For an item or location, you get a sense of what it does and learn any means of activating it. For an ongoing effect (such as a spell with a duration), you learn the effect's name and what it does. You can't try again in hopes of getting a critical success.",
+               "failure": "You fail to identify the magic and can't try again for 1 day.",
+               "criticalFailure": "You misidentify the magic as something else of the GM's choice.",
+               "samples": "",
+               "table": [
+                    [ "Magical Tradition", "Skill" ],
+                    [ "Arcane", "Arcana" ],
+                    [ "Divine", "Religion" ],
+                    [ "Occult", "Occultism" ],
+                    [ "Primal", "Nature" ]
+               ]
+            }, {
+               "name": "Learn a Spell (trained)",
+               "requirements": "You have a spellcasting class feature, and the spell you want to learn is on your magical tradition's spell list.",
+               "description": "You can gain access to a new spell of your tradition from someone who knows that spell or from magical writing like a spellbook or scroll. If you can cast spells of multiple traditions, you can Learn a Spell of any of those traditions, but you must use the corresponding skill to do so. To learn the spell, you must do the following: spend 1 hour per level of the spell, during which you must remain in conversation with a person who knows the spell or have the magical writing in your possession; have materials with the Price indicated below; attempt a skill check for the skill corresponding to your tradition. Uncommon or rare spells have higher DCs. If you have a spellbook, Learning a Spell lets you add the spell to your spellbook; if you prepare spells from a list, it's added to your list; if you have a spell repertoire, you can select it when you add or swap spells.",
+               "criticalSuccess": "You expend half the materials and learn the spell.",
+               "success": "You expend the materials and learn the spell.",
+               "failure": "You fail to learn the spell but can try again after you gain a level. The materials aren't expended.",
+               "criticalFailure": "As failure, plus you expend half the materials.",
+               "samples": "",
+               "table": [
+                    [ "Spell Level", "Price", "Typical DC" ],
+                    [ "1st or cantrip", "2gp", "15" ],
+                    [ "2nd", "6gp", "18" ],
+                    [ "3rd", "16gp", "20" ],
+                    [ "4th", "36gp", "23" ],
+                    [ "5th", "70gp", "26" ],
+                    [ "6th", "140gp", "28" ],
+                    [ "7th", "300gp", "31" ],
+                    [ "8th", "650gp", "34" ],
+                    [ "9th", "1500gp", "36" ],
+                    [ "10th", "7000gp", "41" ]
+               ]
+            }, {
+               "name": "Earn Income (trained)",
+               "requirements": "Crafting, Lore or Performance proficiency",
+               "description": "You use one of your skills to make money during downtime. The GM assigns a task level representing the most lucrative job available. You can search for lower-level tasks, with the GM determining whether you find any. Sometimes you can attempt to find better work than the initial offerings, though this takes time and requires using the Diplomacy skill to Gather Information, doing some research, or socializing. When you take on a job, the GM secretly sets the DC of your skill check. After your first day of work, you roll to determine your earnings. You gain an amount of income based on your result, the task's level, and your proficiency rank. You can continue working at the task on subsequent days without needing to roll again. For each day you spend after the first, you earn the same amount as the first day, up until the task's completion. The GM determines how long you can work at the task. Most tasks last a week or two, though some can take months or even years.",
+               "criticalSuccess": "You do outstanding work. Gain the amount of currency listed for the task level + 1 and your proficiency rank.",
+               "success": "You do competent work. Gain the amount of currency listed for the task level and your proficiency rank.",
+               "failure": "You do shoddy work and get paid the bare minimum for your time. Gain the amount of currency listed in the failure column for the task level. The GM will likely reduce how long you can continue at the task.",
+               "criticalFailure": "You earn nothing for your work and are fired immediately. You can't continue at the task. Your reputation suffers, potentially making it difficult for you to find rewarding jobs in that community in the future.",
+               "samples": "Trained; bartend, do legal research; Expert: curate drink selection, present minor court cases; Master: run a large brewery, present important court cases; Legendary: run an international brewing franchise, present a case in Hell's courts.",
+                "table": []
+            }]
+        }
+    ]
+}
