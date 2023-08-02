@@ -83,7 +83,7 @@ export default function NewFighter() {
                     <input className="w-full p-0.5" type='text' value={value} onChange={(e) => setValue(e.target.value)}></input>
                     {value !== "" && !invisible && <div className="absolute flex flex-col top-[29px] bg-surface-container p-2 w-52 rounded-b-sm">
                         {filteredResults.map(res =>
-                            <div className="w-full p-1 rounded-sm hover:bg-primary hover:text-white" onClick={() => handleClick(res.name)}>{res.name}</div>
+                            <div key={res.name} className="w-full p-1 rounded-sm hover:bg-primary hover:text-white" onClick={() => handleClick(res.name)}>{res.name}</div>
                         )}
                     </div>}
                 </div>
