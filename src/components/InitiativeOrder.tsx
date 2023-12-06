@@ -73,7 +73,7 @@ export default function InitiativeOrder() {
             {addNew && <NewFighter />}
             {isOpen && (
               <EnemyCard
-                monsterName={isOpen.match(/\(?\b[a-z]+\b\)?/gi)?.join(" ")!}
+                monsterName={isOpen.match(/\(?\b[a-z]+\b\)?/gi)?.join(" ")}
               />
             )}
           </div>

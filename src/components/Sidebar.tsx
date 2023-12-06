@@ -21,37 +21,37 @@ export default function Sidebar() {
   const toggleSkills = skills?.map((el) => {
     return {
       id: el.id,
-      title: `${el.name} (${el.skill})`,
-      propOne: `Trained? ${el.trained ? "Yes" : "No"}`,
-      propTwo: `Actions: ${el.num_actions ?? "-"}`,
-      propThree: `Requirements: ${el.requirements ?? "-"}`,
-      propFour: `Description: ${el.description}`,
-      propFive: `Critical success: ${el.crit_success ?? "-"}`,
-      propSix: `Success: ${el.success ?? "-"}`,
-      propSeven: `Failure: ${el.failure ?? "-"}`,
-      propEight: `Critical failure: ${el.crit_failure ?? "-"}`,
+      title: el.name,
+      subtitle: el.skill,
+      propOne: el.trained,
+      propTwo: el.num_actions,
+      propThree: el.requirements,
+      propFour: el.description,
+      propFive: el.crit_success,
+      propSix: el.success,
+      propSeven: el.failure,
+      propEight: el.crit_failure,
+      propNine: el.samples,
     };
   });
 
   toggleSkills?.sort((a, b) =>
-    a.title > b.title ? 1 : b.title > a.title ? -1 : 0,
+    a.title > b.title ? 1 : b.title > a.title ? -1 : 0
   );
-  console.log(toggleSkills);
 
   function handleClick(value: string) {
     isOpen === value ? setIsOpen(null) : setIsOpen(value);
     isActive === value ? setIsActive("") : setIsActive(value);
   }
 
-  console.log(isOpen, isActive);
-
   return (
     <div className="relative flex gap-4 z-10 h-full">
       <Drawer>
         <Accordion
-          className="max-h-screen overflow-y-auto scrollbar overflow-x-hidden transition-all duration-500 p-4"
+          className="max-h-screen overflow-y-auto scrollbar overflow-x-hidden transition-all duration-500 py-4"
           infos={isActive === "skills" ? toggleSkills : toggleConditions}
           width={isOpen ? "650px" : "0"}
+          skills={isActive === "skills" ? true : false}
         />
       </Drawer>
       <div

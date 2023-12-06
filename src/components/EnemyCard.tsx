@@ -1,6 +1,11 @@
 import useGetMonsterInfo from "./useGetMonsterInfo";
 
-export default function EnemyCard({ monsterName }: { monsterName: string }) {
+export default function EnemyCard({
+  monsterName,
+}: {
+  monsterName: string | undefined;
+}) {
+  if (!monsterName) monsterName = "";
   const { monster } = useGetMonsterInfo(monsterName);
   console.log(monster);
 

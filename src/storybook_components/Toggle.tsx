@@ -36,7 +36,7 @@ export default function Toggle({
             className="flex flex-col items-start justify-center"
             style={{ width: `${parseInt(width) - 144}px` }}
           >
-            <h3 className="overflow-hidden text-left brief-title">
+            <h3 className="overflow-hidden text-left brief-title pl-4">
               {info.title}
             </h3>
             <p
@@ -65,7 +65,7 @@ export default function Toggle({
             : "max-h-0 duration-1000"
         }`}
       >
-        <div className="p-4">
+        <div className="px-8 py-4">
           <div
             className={compressed ? "max-h-40 overflow-y-scroll scrollbar" : ""}
           >

@@ -14,6 +14,7 @@ export interface ToggleProps extends HeaderProps {
   propSix?: string;
   propSeven?: string;
   propEight?: string;
+  propNine?: string
 }
 
 export interface AccordionElProps extends HeaderProps {
