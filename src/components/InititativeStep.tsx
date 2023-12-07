@@ -15,7 +15,7 @@ export default function InitiativeStep({ init, i }: InitProps) {
   return (
     <div className="flex flex-col gap-4 items-center">
       <li className="flex flex-col items-center justify-center gap-4 cursor-pointer relative z-1 w-[140px]">
-        <p>{init.name}</p>
+        <p className="overflow-hidden brief-subtitle">{init.name}</p>
         {openEdit === init.name ? (
           <input
             className="flex items-center justify-center text-center rounded-full w-8 h-8"

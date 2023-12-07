@@ -20,7 +20,7 @@ export async function getMonstersNames({
 }
 
 export async function getMonsterInfo({ name }: { name: string }) {
-  let query = supabase.from("monsters").select("*").eq("name", name).single();
+  const query = supabase.from("monsters").select("*").eq("name", name).single();
 
   const { data, error } = await query;
 

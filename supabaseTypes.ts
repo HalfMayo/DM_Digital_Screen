@@ -34,8 +34,14 @@ export interface Database {
           skills: number[];
           speed: number;
           ts: number[];
+          more_ts: string | null;
           unique: boolean;
           weaknesses: string | null;
+          more_speed: string | null;
+          spells_types: string[] | null;
+          base_spells: string[] | null;
+          special_spells: string[] | null;
+          rituals: string[] | null;
         };
         Insert: {
           ac: number;

@@ -1,5 +1,6 @@
 import { useFighters } from "../contexts/FightersContext";
 import Button from "../storybook_components/Button";
+import Tip from "../storybook_components/Tip";
 
 export default function AddTeam() {
   const { friends, dispatch } = useFighters();
@@ -10,16 +11,16 @@ export default function AddTeam() {
       <h2 className="text-4xl font-bold">
         The perfect tool to master your PF2e sessions
       </h2>
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h3 className="text-xl text-center font-semibold w-[45%]">
+      <div className="flex flex-col items-center justify-center w-2/5 gap-4">
+        <Tip>
           NOTE: At the moment, this app is not responsive. Even when
           responsiveness will be implemented, the visualization will be optimal
           only on devices no smaller than a tablet.
-        </h3>
-        <h3 className="text-xl text-center font-semibold mb-8 w-[45%]">
+        </Tip>
+        <Tip>
           NOTE 2: The monsters database is still under construction, so your
           choice will be veeeery limited.
-        </h3>
+        </Tip>
       </div>
       <Button
         label="Add new party"
