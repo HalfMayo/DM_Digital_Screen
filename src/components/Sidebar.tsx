@@ -8,6 +8,8 @@ import useGetConditions from "./useGetConditions";
 import useGetSkills from "./useGetSkills";
 import { useState } from "react";
 
+// TODO memoize this component, otherwise, since it's inside Fighter Provider, it will rerender everytime other unrelated stuff rerenders
+
 export default function Sidebar() {
   const [isActive, setIsActive] = useState<string>("");
   const [isOpen, setIsOpen] = useState<string | null>(null);
