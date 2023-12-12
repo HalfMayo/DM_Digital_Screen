@@ -40,7 +40,10 @@ export default function ToggleSkill({
         <div className="flex items-center justify-start w-full gap-4">
           <div className="flex items-center justify-end w-full flex-wrap gap-2">
             {skillsList?.map((el) => (
-              <p className="text-sm font-semibold px-2 py-1 bg-tertiary-container text-on-surface rounded-md">
+              <p
+                key={el}
+                className="text-sm font-semibold px-2 py-1 bg-tertiary-container text-on-surface rounded-md"
+              >
                 {el}
               </p>
             ))}

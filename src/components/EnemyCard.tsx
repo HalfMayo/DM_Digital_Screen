@@ -57,7 +57,7 @@ export default function EnemyCard({
           </p>
           {monster?.conditions && (
             <>
-              {monster?.conditions.map((el) => (
+              {monster?.conditions.map((el: string) => (
                 <p key={el}>
                   <span className="font-bold">{el[0]}:</span> {el[1]}
                 </p>
@@ -70,7 +70,7 @@ export default function EnemyCard({
             <>
               <strong>Melee: </strong>
               <ul className="ml-8 list-disc">
-                {monster?.["attacks-melee"].map((att, i) => (
+                {monster?.["attacks-melee"].map((att: string, i: number) => (
                   <li key={i}>
                     {att[0]}
                     {att[1] ? `, ${att[1]}` : ""}
@@ -84,7 +84,7 @@ export default function EnemyCard({
             <>
               <strong>Ranged: </strong>
               <ul className="ml-8 list-disc">
-                {monster?.["attacks-ranged"].map((att, i) => (
+                {monster?.["attacks-ranged"].map((att: string, i: number) => (
                   <li key={i}>
                     {att[0]}
                     {att[1] ? `, ${att[1]}` : ""}
@@ -99,7 +99,7 @@ export default function EnemyCard({
             <>
               <strong>Special: </strong>
               <ul className="ml-8 list-disc">
-                {monster?.["attacks-special"].map((att, i) => (
+                {monster?.["attacks-special"].map((att: string, i: number) => (
                   <li key={i}>
                     {att[0]}
                     {att[1] ? ` (${att[1]})` : ""}
@@ -113,7 +113,7 @@ export default function EnemyCard({
           )}
           {monster?.spells_types && (
             <>
-              {monster?.spells_types.map((el, i) => (
+              {monster?.spells_types.map((el: string, i: number) => (
                 <p>
                   {el[0] !== "" && (
                     <>
@@ -123,73 +123,79 @@ export default function EnemyCard({
                     </>
                   )}
                   {i === 0
-                    ? monster?.base_spells?.map((el, i, arr) => (
-                        <>
-                          {el[0] !== "" && (
-                            <span key={i}>
-                              <span className="font-semibold">
-                                {i === 0
-                                  ? "Cantrips"
-                                  : i === 1
-                                  ? `${i}st`
-                                  : i === 2
-                                  ? `${i}nd`
-                                  : i === 3
-                                  ? `${i}rd`
-                                  : `${i}th`}
-                                :
-                              </span>{" "}
-                              {el}
-                              {i !== arr.length - 1 && `; `}
-                            </span>
-                          )}
-                        </>
-                      ))
+                    ? monster?.base_spells?.map(
+                        (el: string, i: number, arr: string[]) => (
+                          <>
+                            {el[0] !== "" && (
+                              <span key={i}>
+                                <span className="font-semibold">
+                                  {i === 0
+                                    ? "Cantrips"
+                                    : i === 1
+                                    ? `${i}st`
+                                    : i === 2
+                                    ? `${i}nd`
+                                    : i === 3
+                                    ? `${i}rd`
+                                    : `${i}th`}
+                                  :
+                                </span>{" "}
+                                {el}
+                                {i !== arr.length - 1 && `; `}
+                              </span>
+                            )}
+                          </>
+                        )
+                      )
                     : i === 1
-                    ? monster?.special_spells?.map((el, i, arr) => (
-                        <>
-                          {el[0] !== "" && (
-                            <span key={i}>
-                              <span className="font-semibold">
-                                {i === 0
-                                  ? "Cantrips"
-                                  : i === 1
-                                  ? `${i}st`
-                                  : i === 2
-                                  ? `${i}nd`
-                                  : i === 3
-                                  ? `${i}rd`
-                                  : `${i}th`}
-                                :
-                              </span>{" "}
-                              {el}
-                              {i !== arr.length - 1 && `; `}
-                            </span>
-                          )}
-                        </>
-                      ))
-                    : monster?.rituals?.map((el, i, arr) => (
-                        <>
-                          {el[0] !== "" && (
-                            <span key={i}>
-                              <span className="font-semibold">
-                                {i === 0
-                                  ? "Cantrips"
-                                  : i === 1
-                                  ? `${i}st`
-                                  : i === 2
-                                  ? `${i}nd`
-                                  : i === 3
-                                  ? `${i}rd`
-                                  : `${i}th`}
-                                :
-                              </span>{" "}
-                              {el}
-                              {i !== arr.length - 1 && `; `}
-                            </span>
-                          )}
-                        </>
-                      ))}
+                    ? monster?.special_spells?.map(
+                        (el: string, i: number, arr: string[]) => (
+                          <>
+                            {el[0] !== "" && (
+                              <span key={i}>
+                                <span className="font-semibold">
+                                  {i === 0
+                                    ? "Cantrips"
+                                    : i === 1
+                                    ? `${i}st`
+                                    : i === 2
+                                    ? `${i}nd`
+                                    : i === 3
+                                    ? `${i}rd`
+                                    : `${i}th`}
+                                  :
+                                </span>{" "}
+                                {el}
+                                {i !== arr.length - 1 && `; `}
+                              </span>
+                            )}
+                          </>
+                        )
+                      )
+                    : monster?.rituals?.map(
+                        (el: string, i: number, arr: string[]) => (
+                          <>
+                            {el[0] !== "" && (
+                              <span key={i}>
+                                <span className="font-semibold">
+                                  {i === 0
+                                    ? "Cantrips"
+                                    : i === 1
+                                    ? `${i}st`
+                                    : i === 2
+                                    ? `${i}nd`
+                                    : i === 3
+                                    ? `${i}rd`
+                                    : `${i}th`}
+                                  :
+                                </span>{" "}
+                                {el}
+                                {i !== arr.length - 1 && `; `}
+                              </span>
+                            )}
+                          </>
+                        )
+                      )}
                 </p>
               ))}
             </>
@@ -198,7 +204,7 @@ export default function EnemyCard({
             <>
               <strong>Feats: </strong>
               <ul className="ml-8 list-disc">
-                {monster?.feats.map((ft, i) => (
+                {monster?.feats.map((ft: string, i: number) => (
                   <li key={i}>
                     {ft[0]}
                     {ft[1] ? ` - ${ft[1]}` : ""}

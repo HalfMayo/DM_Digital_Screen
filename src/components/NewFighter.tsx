@@ -3,6 +3,7 @@ import { InitInfo, useFighters } from "../contexts/FightersContext";
 import Button from "../storybook_components/Button";
 import { ReactComponent as Mark } from "../assets/svgs/exclamation-svgrepo-com.svg";
 import useGetMonstersNames from "./useGetMonstersNames";
+import { MonsterProps } from "../../supabaseTypes";
 
 type ErrorForm = "errorFighter" | "errorInitiative";
 
@@ -19,7 +20,7 @@ export default function NewFighter() {
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [incompleteForm, setIncompleteForm] = useState<ErrorForm | null>(null);
 
-  function handleChange(e: any) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     e.target.checked ? setFaction("foe") : setFaction("friend");
   }
 
@@ -39,10 +40,10 @@ export default function NewFighter() {
     function dispatchHandler(type: "addFighter" | "submitOrder") {
       const initNameFilter = initiativeOrder.filter(
         (init: InitInfo) =>
-          init.name?.match(/\(?\b[a-z]+\b\)?/gi)?.join(" ") === fighterName,
+          init.name?.match(/\(?\b[a-z]+\b\)?/gi)?.join(" ") === fighterName
       ).length;
       const enemyInfo = monstersNames?.filter(
-        (foe) => foe.name === fighterName,
+        (foe: MonsterProps) => foe.name === fighterName
       );
       setIncompleteForm(null);
       setSubmitted(true);
@@ -129,7 +130,7 @@ export default function NewFighter() {
               ></input>
               {inputValue !== "" && !invisible && (
                 <ul className="absolute flex flex-col top-[29px] bg-surface-container p-2 w-52 rounded-b-sm">
-                  {monstersNames?.map((res) => (
+                  {monstersNames?.map((res: MonsterProps) => (
                     <li
                       key={res.name}
                       className="w-full p-1 rounded-sm hover:bg-primary hover:text-white"
