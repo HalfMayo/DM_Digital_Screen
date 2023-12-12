@@ -6,7 +6,6 @@ import InitiativeStep from "./InititativeStep";
 //import SuperAccordion from '../storybook_components/SuperAccordion';
 import Button from "../storybook_components/Button";
 import Sidebar from "./Sidebar";
-import { RulesProvider } from "../contexts/RulesContext";
 import AddTeam from "./AddTeam";
 import NewTeam from "./NewTeam";
 
@@ -19,54 +18,67 @@ import NewTeam from "./NewTeam";
     [X] useReducer per nascondere la schermata iniziale di inserimento delle iniziative [!!]
 */
 
-export default function Initiative() {
+export default function InitiativeOrder() {
+  const { initiativeOrder, friends, dispatch, addNew, index, status, isOpen } =
+    useFighters();
 
-    const{initiativeOrder, friends, dispatch, addNew, index, status} = useFighters();
+  return (
+    <div className="flex items-start justify-center h-screen relative">
+      <Sidebar />
 
-    return(
-            <div className="flex items-start justify-center h-screen relative">
-                <RulesProvider>
-                    <Sidebar />
-                </RulesProvider>
+      {status === "teamChoice" && <AddTeam />}
 
-                {status === "teamChoice" &&
-                    <AddTeam/>
-                }
+      {status === "newTeam" && (
+        <div className="w-screen flex justify-center mt-12">
+          <ul className="flex flex-col items-center justify-center gap-8 w-[600px]">
+            {friends.map((el: string, i: number) => (
+              <NewTeam key={el + i} />
+            ))}
+          </ul>
+        </div>
+      )}
 
-                {status === "newTeam" &&
-                    <div className="w-screen flex justify-center mt-12">
-                        <ul className="flex flex-col items-center justify-center gap-8 w-[600px]">
-                            {friends.map((el: string, i:number) =>
-                                <NewTeam key={el + i}/>
-                            )}
-                        </ul>
-                    </div>
-                }
+      {status === "input" && (
+        <div className="w-screen flex justify-center mt-12">
+          <ul className="flex flex-col items-center justify-center gap-8 w-[600px]">
+            {initiativeOrder.map((init: InitInfo, i: number) => (
+              <NewFighter key={init.name + i} />
+            ))}
+          </ul>
+        </div>
+      )}
 
-                {status === "input" &&
-                    <div className="w-screen flex justify-center mt-12">
-                        <ul className="flex flex-col items-center justify-center gap-8 w-[600px]">
-                            {initiativeOrder.map((init:InitInfo, i:number) =>
-                                <NewFighter key={init.name + i}/>
-                            )}
-                        </ul>
-                    </div>}
-
-                {status === "ordered" &&
-                    <div className="w-screen flex justify-center mt-12">
-                        <div className="flex flex-col gap-8 items-center justify-center relative">
-                                <ul className="flex items-start justify-between gap-4">
-                                    <progress className="progress h-2 absolute top-[3.2rem] left-[50%] translate-x-[-50%] z-0" max={initiativeOrder.length - 1} value={index} style={{width:`calc((156px * ${initiativeOrder.length}) - 140px)`}}></progress>
-                                    {initiativeOrder.map((init:InitInfo, i:number) =>
-                                        <InitiativeStep key={i} init={init} i={i} />
-                                    )}
-                                </ul>
-                            <Button label="+ Add new fighter" color="secondary" rank="main" onClick={() => dispatch({type: "addNew"})}/>
-                            {addNew && <NewFighter/>}
-                            <EnemyCard />
-                        </div>
-                    </div>
-                }
-            </div>
-    )
+      {status === "ordered" && (
+        <div className="w-screen flex justify-center mt-12">
+          <div className="flex flex-col gap-8 items-center justify-center relative">
+            <ul className="flex items-start justify-between gap-4">
+              <progress
+                className="progress h-2 absolute top-[3.2rem] left-[50%] translate-x-[-50%] z-0"
+                max={initiativeOrder.length - 1}
+                value={index}
+                style={{
+                  width: `calc((156px * ${initiativeOrder.length}) - 140px)`,
+                }}
+              ></progress>
+              {initiativeOrder.map((init: InitInfo, i: number) => (
+                <InitiativeStep key={i} init={init} i={i} />
+              ))}
+            </ul>
+            <Button
+              label="+ Add new fighter"
+              color="secondary"
+              rank="main"
+              onClick={() => dispatch({ type: "addNew" })}
+            />
+            {addNew && <NewFighter />}
+            {isOpen && (
+              <EnemyCard
+                monsterName={isOpen.match(/\(?\b[a-z]+\b\)?/gi)?.join(" ")}
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }

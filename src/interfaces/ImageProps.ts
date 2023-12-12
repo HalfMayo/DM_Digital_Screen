@@ -1,4 +1,4 @@
 export default interface ImageProps {
-    url: string,
-    altText: string
+  url: string;
+  altText: string;
 }

@@ -1,13 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Initiative from './components/InitiativeOrder'
-import './index.css'
-import { FightersProvider } from './contexts/FightersContext'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import InitiativeOrder from "./components/InitiativeOrder";
+import "./index.css";
+import { FightersProvider } from "./contexts/FightersContext";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const queryClient = new QueryClient();
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <FightersProvider>
-      <Initiative />
-    </FightersProvider>
-  </React.StrictMode>,
-)
+    <QueryClientProvider client={queryClient}>
+      <FightersProvider>
+        <InitiativeOrder />
+      </FightersProvider>
+    </QueryClientProvider>
+  </React.StrictMode>
+);
