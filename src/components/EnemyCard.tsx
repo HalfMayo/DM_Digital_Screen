@@ -6,8 +6,29 @@ export default function EnemyCard({
   monsterName: string | undefined;
 }) {
   if (!monsterName) monsterName = "";
+
   const { monster } = useGetMonsterInfo(monsterName);
-  console.log(monster);
+
+  let skills: string[] = [];
+
+  if (monster) {
+    const nonNullSkills = [];
+    for (let i = 0; i < Object.keys(monster?.skills).length; i++) {
+      if (Object.values(monster?.skills)[i] !== 0) {
+        const key =
+          Object.keys(monster?.skills)[i] === "lore"
+            ? monster?.lore_spec +
+              " " +
+              Object.keys(monster?.skills)[i].slice(0, 1).toUpperCase() +
+              Object.keys(monster?.skills)[i].slice(1)
+            : Object.keys(monster?.skills)[i].slice(0, 1).toUpperCase() +
+              Object.keys(monster?.skills)[i].slice(1);
+        nonNullSkills.push([key, Object.values(monster?.skills)[i]]);
+      }
+    }
+    skills = nonNullSkills.map((skill) => skill.join(" "));
+    skills.sort();
+  }
 
   return (
     <div className="flex flex-col w-[600px]">
@@ -116,11 +137,11 @@ export default function EnemyCard({
               {monster?.spells_types.map((el: string, i: number) => (
                 <p>
                   {el[0] !== "" && (
-                    <>
+                    <span key={el}>
                       <span className="font-bold">{el[0]}</span> (DC {el[1]})
                       {el[2] !== "" && `, ${el[2]}`}
                       <br />
-                    </>
+                    </span>
                   )}
                   {i === 0
                     ? monster?.base_spells?.map(
@@ -218,40 +239,14 @@ export default function EnemyCard({
         <div className="mt-8">
           <p>
             <strong>Stats: </strong>
-            Str {monster?.char[0]}, Dex {monster?.char[1]}, Con{" "}
-            {monster?.char[2]}, Int {monster?.char[3]}, Wis {monster?.char[4]},
-            Cha {monster?.char[5]}
+            Str {monster?.stats.strenght}, Dex {monster?.stats.dexterity}, Con{" "}
+            {monster?.stats.constitution}, Int {monster?.stats.intelligence},
+            Wis {monster?.stats.wisdom}, Cha {monster?.stats.charisma}
           </p>
           {monster?.skills && (
             <p>
               <strong>Skills: </strong>
-
-              {monster?.skills[0] !== 0 &&
-                `Acrobatics +${monster?.skills[0]}, `}
-              {monster?.skills[1] !== 0 && `Arcana +${monster?.skills[1]}, `}
-              {monster?.skills[2] !== 0 && `Athletics +${monster?.skills[2]}, `}
-              {monster?.skills[3] !== 0 && `Crafting +${monster?.skills[3]}, `}
-              {monster?.skills[4] !== 0 && `Deception +${monster?.skills[4]}, `}
-              {monster?.skills[5] !== 0 && `Diplomacy +${monster?.skills[5]}, `}
-              {monster?.skills[6] !== 0 &&
-                `Intimidation +${monster?.skills[6]}, `}
-              {monster?.skills[7] !== 0 &&
-                `${monster?.lore_spec + " " ?? ""}Lore +${
-                  monster?.skills[7]
-                }, `}
-              {monster?.skills[8] !== 0 && `Medicine +${monster?.skills[8]}, `}
-              {monster?.skills[9] !== 0 && `Nature +${monster?.skills[9]}, `}
-              {monster?.skills[10] !== 0 &&
-                `Occultism +${monster?.skills[10]}, `}
-              {monster?.skills[11] !== 0 &&
-                `Performance +${monster?.skills[11]}, `}
-              {monster?.skills[12] !== 0 &&
-                `Religion +${monster?.skills[12]}, `}
-              {monster?.skills[13] !== 0 && `Society +${monster?.skills[13]}, `}
-              {monster?.skills[14] !== 0 && `Stealth +${monster?.skills[14]}, `}
-              {monster?.skills[15] !== 0 &&
-                `Survival +${monster?.skills[15]}, `}
-              {monster?.skills[16] !== 0 && `Thievery +${monster?.skills[16]}`}
+              {skills.join(", ")}
             </p>
           )}
           {monster?.languages && (
