@@ -1,3 +1,5 @@
+import Stats from "./src/interfaces/Stats"
+
 export type Json =
   | string
   | number
@@ -5,6 +7,7 @@ export type Json =
   | null
   | { [key: string]: Json | undefined }
   | Json[]
+  | Stats
 
 export interface Database {
   public: {

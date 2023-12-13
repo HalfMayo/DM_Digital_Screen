@@ -1,3 +1,5 @@
+import { Json } from "../../supabaseTypes";
+import Stats from "../interfaces/Stats";
 import useGetMonsterInfo from "./useGetMonsterInfo";
 // TODO Rewrite DB idiotic columns!! From array of strings to json file
 export default function EnemyCard({
@@ -8,10 +10,9 @@ export default function EnemyCard({
   if (!monsterName) monsterName = "";
 
   const { monster } = useGetMonsterInfo(monsterName);
-
   let skills: string[] = [];
 
-  if (monster) {
+  if (monster?.skills) {
     const nonNullSkills = [];
     for (let i = 0; i < Object.keys(monster?.skills).length; i++) {
       if (Object.values(monster?.skills)[i] !== 0) {
@@ -28,6 +29,20 @@ export default function EnemyCard({
     }
     skills = nonNullSkills.map((skill) => skill.join(" "));
     skills.sort();
+  }
+
+  function isStat(
+    el:
+      | string
+      | number
+      | boolean
+      | null
+      | { [key: string]: Json | undefined }
+      | Json[]
+      | Stats
+      | undefined
+  ): el is Stats {
+    return (el as Stats).strenght !== undefined;
   }
 
   return (
@@ -239,9 +254,28 @@ export default function EnemyCard({
         <div className="mt-8">
           <p>
             <strong>Stats: </strong>
-            Str {monster?.stats.strenght}, Dex {monster?.stats.dexterity}, Con{" "}
-            {monster?.stats.constitution}, Int {monster?.stats.intelligence},
-            Wis {monster?.stats.wisdom}, Cha {monster?.stats.charisma}
+            Str{" "}
+            {monster?.stats &&
+              isStat(monster?.stats) &&
+              monster?.stats?.strenght}
+            , Dex{" "}
+            {monster?.stats &&
+              isStat(monster?.stats) &&
+              monster?.stats?.dexterity}
+            , Con{" "}
+            {monster?.stats &&
+              isStat(monster?.stats) &&
+              monster?.stats?.constitution}
+            , Int{" "}
+            {monster?.stats &&
+              isStat(monster?.stats) &&
+              monster?.stats?.intelligence}
+            , Wis{" "}
+            {monster?.stats && isStat(monster?.stats) && monster?.stats?.wisdom}
+            , Cha{" "}
+            {monster?.stats &&
+              isStat(monster?.stats) &&
+              monster?.stats?.charisma}
           </p>
           {monster?.skills && (
             <p>
