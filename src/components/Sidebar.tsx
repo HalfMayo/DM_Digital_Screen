@@ -25,7 +25,7 @@ export default function Sidebar() {
       id: el.id,
       title: el.name,
       subtitle: el.skill,
-      propOne: el.trained,
+      propOne: el.trained.toString(),
       propTwo: el.num_actions,
       propThree: el.requirements,
       propFour: el.description,

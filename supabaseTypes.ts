@@ -27,21 +27,21 @@ export interface Database {
       conditions: {
         Row: {
           created_at: string
-          description: string | null
+          description: string
           id: number
-          name: string | null
+          name: string
         }
         Insert: {
           created_at?: string
-          description?: string | null
+          description: string
           id?: number
-          name?: string | null
+          name: string
         }
         Update: {
           created_at?: string
-          description?: string | null
+          description: string
           id?: number
-          name?: string | null
+          name: string
         }
         Relationships: []
       }
@@ -146,13 +146,13 @@ export interface Database {
           description: string | null
           failure: string | null
           id: number
-          name: string | null
+          name: string
           num_actions: number | null
           requirements: string | null
           samples: string | null
           skill: string | null
           success: string | null
-          trained: boolean | null
+          trained: boolean
         }
         Insert: {
           created_at?: string
@@ -161,13 +161,13 @@ export interface Database {
           description?: string | null
           failure?: string | null
           id?: number
-          name?: string | null
+          name: string
           num_actions?: number | null
           requirements?: string | null
           samples?: string | null
           skill?: string | null
           success?: string | null
-          trained?: boolean | null
+          trained: boolean
         }
         Update: {
           created_at?: string
@@ -176,13 +176,13 @@ export interface Database {
           description?: string | null
           failure?: string | null
           id?: number
-          name?: string | null
+          name: string
           num_actions?: number | null
           requirements?: string | null
           samples?: string | null
           skill?: string | null
           success?: string | null
-          trained?: boolean | null
+          trained: boolean
         }
         Relationships: []
       }
