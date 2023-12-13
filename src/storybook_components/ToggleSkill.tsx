@@ -72,7 +72,7 @@ export default function ToggleSkill({
           >
             <p>
               <span className="font-semibold">Trained? </span>
-              {info.propOne ? "Yes" : "No"}
+              {info.propOne === "true" ? "Yes" : "No"}
             </p>
             <p>
               <span className="font-semibold">Number of actions: </span>
@@ -110,8 +110,8 @@ export default function ToggleSkill({
               )}
               {info.propNine && (
                 <div className="mt-4">
-                  {samplesList?.map((el) => (
-                    <p>
+                  {samplesList?.map((el, i) => (
+                    <p key={i}>
                       <span className="font-semibold">
                         {el.split(" ").splice(0, 1)}
                       </span>{" "}
