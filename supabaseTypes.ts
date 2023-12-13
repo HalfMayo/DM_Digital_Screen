@@ -1,3 +1,9 @@
+import AttackBase from "./src/interfaces/AttackBase"
+import AttackSpecial from "./src/interfaces/AttackSpecial"
+import Condition from "./src/interfaces/Condition"
+import Feat from "./src/interfaces/Feat"
+import SaveThrows from "./src/interfaces/SaveThrows"
+import Spell from "./src/interfaces/Spell"
 import Stats from "./src/interfaces/Stats"
 
 export type Json =
@@ -8,6 +14,12 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
   | Stats
+  | SaveThrows
+  | Feat
+  | AttackBase
+  | AttackSpecial
+  | Condition
+  | Spell
 
 export interface Database {
   public: {
@@ -37,13 +49,12 @@ export interface Database {
         Row: {
           ac: number
           attacks_specials_explanation: string[] | null
-          "attacks-melee": string[] | null
-          "attacks-ranged": string[] | null
-          "attacks-special": string[] | null
-          base_spells: string[] | null
+          attacks_melee: Json | null
+          attacks_ranged: Json | null
+          attacks_special: Json | null
           conditions: string[] | null
           created_at: string
-          feats: string[] | null
+          feats: Json | null
           hp: number
           id: number
           immunities: string | null
@@ -57,26 +68,23 @@ export interface Database {
           name: string
           perception: number
           resistances: string | null
-          rituals: string[] | null
+          save_throws: Json | null
           skills: Json | null
-          special_spells: string[] | null
           speed: number
-          spells_types: string[] | null
+          spells: Json | null
           stats: Json | null
-          ts: number[]
           unique: boolean
           weaknesses: string | null
         }
         Insert: {
           ac: number
           attacks_specials_explanation?: string[] | null
-          "attacks-melee"?: string[] | null
-          "attacks-ranged"?: string[] | null
-          "attacks-special"?: string[] | null
-          base_spells?: string[] | null
+          attacks_melee?: Json | null
+          attacks_ranged?: Json | null
+          attacks_special: Json | null
           conditions?: string[] | null
           created_at?: string
-          feats?: string[] | null
+          feats?: Json | null
           hp: number
           id?: number
           immunities?: string | null
@@ -90,26 +98,23 @@ export interface Database {
           name: string
           perception: number
           resistances?: string | null
-          rituals?: string[] | null
+          save_throws?: Json | null
           skills?: Json | null
-          special_spells?: string[] | null
           speed: number
-          spells_types?: string[] | null
+          spells?: Json | null
           stats?: Json | null
-          ts: number[]
           unique: boolean
           weaknesses?: string | null
         }
         Update: {
           ac?: number
           attacks_specials_explanation?: string[] | null
-          "attacks-melee"?: string[] | null
-          "attacks-ranged"?: string[] | null
-          "attacks-special"?: string[] | null
-          base_spells?: string[] | null
+          attacks_melee?: Json | null
+          attacks_ranged?: Json | null
+          attacks_special: Json | null
           conditions?: string[] | null
           created_at?: string
-          feats?: string[] | null
+          feats?: Json | null
           hp?: number
           id?: number
           immunities?: string | null
@@ -123,13 +128,11 @@ export interface Database {
           name?: string
           perception?: number
           resistances?: string | null
-          rituals?: string[] | null
+          save_throws: Json | null
           skills?: Json | null
-          special_spells?: string[] | null
           speed?: number
-          spells_types?: string[] | null
+          spells?: Json | null
           stats?: Json | null
-          ts?: number[]
           unique?: boolean
           weaknesses?: string | null
         }
