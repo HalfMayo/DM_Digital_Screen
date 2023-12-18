@@ -5,7 +5,7 @@ import InitiativeStep from "./InititativeStep";
 //import { conditions } from "../assets/fake dbs/conditions";
 //import SuperAccordion from '../storybook_components/SuperAccordion';
 import Button from "../storybook_components/Button";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
 import AddTeam from "./AddTeam";
 import NewTeam from "./NewTeam";
 
@@ -24,7 +24,7 @@ export default function InitiativeOrder() {
 
   return (
     <div className="flex items-start justify-center h-screen relative">
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       {status === "teamChoice" && <AddTeam />}
 

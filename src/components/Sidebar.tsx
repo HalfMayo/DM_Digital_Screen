@@ -47,48 +47,50 @@ export default function Sidebar() {
   }
 
   return (
-    <div className="relative flex gap-4 z-10 h-full">
-      <Drawer>
-        <Accordion
-          className="max-h-screen overflow-y-auto scrollbar overflow-x-hidden transition-all duration-500 py-4"
-          infos={isActive === "skills" ? toggleSkills : toggleConditions}
-          width={isOpen ? "650px" : "0"}
-          skills={isActive === "skills" ? true : false}
-        />
-      </Drawer>
-      <div
-        className={`absolute flex flex-col pl-8 h-full pt-8 gap-8 bg-white transition-all duration-500 ${
-          isOpen
-            ? "left-[650px] pr-8 shadow-[10px_3px_20px_-15px_rgba(0,0,0,0.3)] rounded-lg"
-            : "left-0"
-        }`}
-      >
-        <Tooltip title="Conditions" side="left">
-          <SvgButton
-            onClick={(e) => handleClick(e.currentTarget.value)}
-            className={`${
-              isActive === "conditions"
-                ? "bg-secondary-container text-on-secondary-container drop-shadow-md"
-                : "drop-shadow-md bg-white hover:bg-secondary-container hover:text-on-secondary-container hover:drop-shadow-md"
-            }`}
-            svg={Conditions}
-            label="open conditions"
-            value="conditions"
+    <div className="relative">
+      <div className="absolute flex gap-4 z-10 h-screen">
+        <Drawer>
+          <Accordion
+            className="max-h-screen overflow-y-auto scrollbar overflow-x-hidden transition-all duration-500 py-4"
+            infos={isActive === "skills" ? toggleSkills : toggleConditions}
+            width={isOpen ? "650px" : "0"}
+            skills={isActive === "skills" ? true : false}
           />
-        </Tooltip>
-        <Tooltip title="Skills" side="left">
-          <SvgButton
-            onClick={(e) => handleClick(e.currentTarget.value)}
-            className={`${
-              isActive === "skills"
-                ? "bg-secondary-container text-on-secondary-container drop-shadow-md"
-                : "drop-shadow-md bg-white hover:bg-secondary-container hover:text-on-secondary-container hover:drop-shadow-md"
-            }`}
-            svg={Skills}
-            label="open skills"
-            value="skills"
-          />
-        </Tooltip>
+        </Drawer>
+        <div
+          className={`absolute flex flex-col pl-8 h-full pt-8 gap-8 bg-white transition-all duration-500 ${
+            isOpen
+              ? "left-[650px] pr-8 shadow-[10px_3px_20px_-15px_rgba(0,0,0,0.3)] rounded-lg"
+              : "left-0"
+          }`}
+        >
+          <Tooltip title="Conditions" side="left">
+            <SvgButton
+              onClick={(e) => handleClick(e.currentTarget.value)}
+              className={`${
+                isActive === "conditions"
+                  ? "bg-secondary-container text-on-secondary-container drop-shadow-md"
+                  : "drop-shadow-md bg-white hover:bg-secondary-container hover:text-on-secondary-container hover:drop-shadow-md"
+              }`}
+              svg={Conditions}
+              label="open conditions"
+              value="conditions"
+            />
+          </Tooltip>
+          <Tooltip title="Skills" side="left">
+            <SvgButton
+              onClick={(e) => handleClick(e.currentTarget.value)}
+              className={`${
+                isActive === "skills"
+                  ? "bg-secondary-container text-on-secondary-container drop-shadow-md"
+                  : "drop-shadow-md bg-white hover:bg-secondary-container hover:text-on-secondary-container hover:drop-shadow-md"
+              }`}
+              svg={Skills}
+              label="open skills"
+              value="skills"
+            />
+          </Tooltip>
+        </div>
       </div>
     </div>
   );
